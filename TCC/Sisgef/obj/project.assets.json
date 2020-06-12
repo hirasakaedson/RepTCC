@@ -8378,11 +8378,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hirasaka\\source\\repos\\Tcc\\Sisgef\\Sisgef.csproj",
+      "projectUniqueName": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj",
       "projectName": "Sisgef",
-      "projectPath": "C:\\Users\\Hirasaka\\source\\repos\\Tcc\\Sisgef\\Sisgef.csproj",
+      "projectPath": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj",
       "packagesPath": "C:\\Users\\Hirasaka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hirasaka\\source\\repos\\Tcc\\Sisgef\\obj\\",
+      "outputPath": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hirasaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
