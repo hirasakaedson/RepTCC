@@ -27,18 +27,40 @@ namespace Sisgef.Models
         [Column(TypeName = "varchar(20)")]
         [DisplayName("Modelo")]
         public string Modelo { get; set; }
-        //public string TipoDoVeiculo { get; set; }
-        //public string TipoCarroceria { get; set; }
-        //public DateTime AnoFabricacao { get; set; }
-        //public int Odometro { get; set; }
-        //public double Combustivel { get; set; }
-        //public string NomeDoProprietario { get; set; }
-        //public int DocumentoDoProprietario { get; set; }
-        //public string LocalDeEmplacamento { get; set; }
-        //public DateTime MesDoSeguro { get; set; }
-        //public string Observacao { get; set; }
-        //public int QuantidadeDeEixos { get; set; }
-        //public int Renavam { get; set; }
-        //public string Seguradora { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Tipo do Veiculo")]
+        public string TipoDoVeiculo { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Tipo de carroceria")]
+        public string TipoCarroceria { get; set; }
+        [Column(TypeName = "int")]
+        [DisplayName("Ano Fabricacao")]
+        public DateTime AnoFabricacao { get; set; }
+        [Column(TypeName = "int")]
+        [DisplayName("Odometro")]
+        public int Odometro { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Combustivel")]
+        public double Combustivel { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Nome do Proprietario")]
+        public string NomeDoProprietario { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Documento do proprietário")]
+        public int DocumentoDoProprietario { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Local de emplacamento")]
+        public string LocalDeEmplacamento { get; set; }
+        [Column(TypeName = "varchar(50)")]
+        [DisplayName("Observação")]
+        public string Observacao { get; set; }
+        [Column(TypeName = "int")]
+        [DisplayName("Quantidade de eixos")]
+        public int QuantidadeDeEixos { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Renavam")]
+        public int Renavam { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        
     }
 }
