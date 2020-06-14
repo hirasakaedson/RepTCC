@@ -22,7 +22,7 @@ namespace Sisgef.Controllers
         // GET: Veiculo
         public async Task<IActionResult> Lista()
         {
-            return View(await _context.Veiculos.ToListAsync());
+            return View(await _context.Veiculo.ToListAsync());
         }
 
         
@@ -31,12 +31,12 @@ namespace Sisgef.Controllers
             if (id == 0)
                 return View(new Veiculo());
             else
-                return View(_context.Veiculos.Find(id));
+                return View(_context.Veiculo.Find(id));
         }
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Placa,Marca,Modelo,Id")] Veiculo veiculo)
+        public async Task<IActionResult> AddEdit([Bind("Placa,Marca,Modelo,Id, TipoDoVeiculo, TipoCarroceria,AnoFabricacao,Odometro,Combustivel, NomeDoProprietario,DocumentoDoProprietario,LocalDeEmplacamento,Observacao,Renavam,Cor, Chassi")] Veiculo veiculo)
         {
             if (ModelState.IsValid)
             {
@@ -53,8 +53,8 @@ namespace Sisgef.Controllers
 
         public async Task<IActionResult> Delete(int? id)
         {
-            var veiculo = await _context.Veiculos.FindAsync(id);
-            _context.Veiculos.Remove(veiculo);
+            var veiculo = await _context.Veiculo.FindAsync(id);
+            _context.Veiculo.Remove(veiculo);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }

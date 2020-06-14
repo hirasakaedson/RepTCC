@@ -18,49 +18,68 @@ namespace Sisgef.Models
     {
 
         [Column(TypeName = "varchar(20)")]
-        [Required(ErrorMessage ="É necessário preencher a placa")]
+        [Required(ErrorMessage = "É necessário preencher a placa")]
         [DisplayName("Placa")]
         public string Placa { get; set; }
+
         [Column(TypeName = "varchar(20)")]
+        [DisplayName("Renavam")]
+        public string Renavam { get; set; }
+
+        [Column(TypeName = "varchar(25)")]
         [DisplayName("Marca")]
         public string Marca { get; set; }
-        [Column(TypeName = "varchar(20)")]
+
+        [Column(TypeName = "varchar(30)")]
         [DisplayName("Modelo")]
         public string Modelo { get; set; }
+
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("Tipo do Veiculo")]
+        [DisplayName("Cor")]
+        public string Cor { get; set; }
+        [Column(TypeName = "varchar(30)")]
+        [DisplayName("Chassi")]
+        public string Chassi { get; set; }
+
+        [Column(TypeName = "varchar(30)")]
+        [DisplayName("Tipo do Veículo")]
         public string TipoDoVeiculo { get; set; }
-        [Column(TypeName = "varchar(20)")]
+
+        [Column(TypeName = "varchar(30)")]
         [DisplayName("Tipo de carroceria")]
         public string TipoCarroceria { get; set; }
-        [Column(TypeName = "int")]
-        [DisplayName("Ano Fabricacao")]
-        public DateTime AnoFabricacao { get; set; }
-        [Column(TypeName = "int")]
-        [DisplayName("Odometro")]
-        public int Odometro { get; set; }
+
+        [Column(TypeName = "varchar(15)")]
+        [DisplayName("Ano Fabricação")]
+        public string AnoFabricacao { get; set; }
+
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("Combustivel")]
-        public double Combustivel { get; set; }
+        [DisplayName("Odômetro")]
+        public string Odometro { get; set; }
+
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("Nome do Proprietario")]
+        [DisplayName("Combustível")]
+        public string Combustivel { get; set; }
+
+        [Column(TypeName = "varchar(100)")]
+        [DisplayName("Nome do proprietário")]
         public string NomeDoProprietario { get; set; }
-        [Column(TypeName = "varchar(20)")]
+
+        [Column(TypeName = "varchar(25)")]
         [DisplayName("Documento do proprietário")]
-        public int DocumentoDoProprietario { get; set; }
-        [Column(TypeName = "varchar(20)")]
+        public string DocumentoDoProprietario { get; set; }
+
+        [Column(TypeName = "varchar(30)")]
         [DisplayName("Local de emplacamento")]
         public string LocalDeEmplacamento { get; set; }
+
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Observação")]
         public string Observacao { get; set; }
-        [Column(TypeName = "int")]
-        [DisplayName("Quantidade de eixos")]
-        public int QuantidadeDeEixos { get; set; }
-        [Column(TypeName = "varchar(20)")]
-        [DisplayName("Renavam")]
-        public int Renavam { get; set; }
-        [Column(TypeName = "varchar(20)")]
-        
+
+       
+
+
     }
+
 }
