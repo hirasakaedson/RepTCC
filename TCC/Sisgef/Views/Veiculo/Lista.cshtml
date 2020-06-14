@@ -4,120 +4,124 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="container ">
+<div class="container-fluid mt-4 ">
     <h4>Veículos cadastrados</h4>
 
     @*<p>
             <a asp-action="AddEdit">Create New</a>
         </p>*@
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Placa)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Renavam)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Marca)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Modelo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Chassi)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TipoDoVeiculo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TipoCarroceria)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AnoFabricacao)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Odometro)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Combustivel)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.NomeDoProprietario)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DocumentoDoProprietario)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LocalDeEmplacamento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Observacao)
-                </th>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Placa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Renavam)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Marca)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Modelo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Chassi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TipoDoVeiculo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TipoCarroceria)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AnoFabricacao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Odometro)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Combustivel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NomeDoProprietario)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DocumentoDoProprietario)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LocalDeEmplacamento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Observacao)
+                    </th>
 
 
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Placa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Renavam)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Marca)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Modelo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Chassi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TipoDoVeiculo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TipoCarroceria)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AnoFabricacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Odometro)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Combustivel)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeDoProprietario)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DocumentoDoProprietario)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LocalDeEmplacamento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Observacao)
-                </td>
-                <td>
-                    <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Placa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Renavam)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Marca)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Modelo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Chassi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoDoVeiculo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoCarroceria)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AnoFabricacao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Odometro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Combustivel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NomeDoProprietario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DocumentoDoProprietario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LocalDeEmplacamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Observacao)
+                        </td>
+                        <td>
+                            <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
 </div>
