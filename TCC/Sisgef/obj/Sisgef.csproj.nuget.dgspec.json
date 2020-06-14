@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj": {}
+    "C:\\Projetos\\RepTCC\\TCC\\Sisgef\\Sisgef.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj": {
+    "C:\\Projetos\\RepTCC\\TCC\\Sisgef\\Sisgef.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj",
+        "projectUniqueName": "C:\\Projetos\\RepTCC\\TCC\\Sisgef\\Sisgef.csproj",
         "projectName": "Sisgef",
-        "projectPath": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\Sisgef.csproj",
+        "projectPath": "C:\\Projetos\\RepTCC\\TCC\\Sisgef\\Sisgef.csproj",
         "packagesPath": "C:\\Users\\Hirasaka\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\RepTCC\\Tcc\\Sisgef\\obj\\",
+        "outputPath": "C:\\Projetos\\RepTCC\\TCC\\Sisgef\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hirasaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
