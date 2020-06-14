@@ -799,7 +799,6 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.c
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\Index.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.RazorTargetAssemblyInfo.cache
@@ -834,4 +833,4 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\AddEdit.cshtml.g.cs
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csprojAssemblyReference.cache
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\Lista.cshtml.g.cs

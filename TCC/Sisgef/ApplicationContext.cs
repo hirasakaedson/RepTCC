@@ -18,13 +18,5 @@ namespace Sisgef
 
         public DbSet<Veiculo> Veiculos { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //    modelBuilder.Entity<Veiculo>().HasKey(t => t.Id);
-
-        //}
-
-
     }
 }
