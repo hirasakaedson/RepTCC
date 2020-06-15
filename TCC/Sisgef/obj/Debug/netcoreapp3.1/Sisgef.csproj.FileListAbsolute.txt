@@ -407,16 +407,6 @@ C:\Users\Hirasaka\source\repos\Tcc\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.Enti
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csproj.CoreCompileInputs.cache
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.MvcApplicationPartsAssemblyInfo.cache
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -693,6 +683,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
@@ -726,6 +717,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
@@ -738,7 +730,10 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Composition.Hosting
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
@@ -752,6 +747,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -769,6 +765,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
@@ -795,6 +792,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
@@ -820,7 +818,9 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.TagHelpers.output.c
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.RazorCoreGenerate.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\AddEdit.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\Lista.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -835,3 +835,4 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.dll
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.pdb
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.genruntimeconfig.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csprojAssemblyReference.cache
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Veiculo\Lista - Copy - Copy.cshtml.g.cs
