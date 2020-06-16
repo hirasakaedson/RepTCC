@@ -7,256 +7,154 @@
 <div class="container-fluid mt-4 ">
     <div class="col-12">
         <h4>Veículos cadastrados</h4>
-
-        <div clas="row">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Placa)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Marca)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Modelo)
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+        <hr />
+        <div class="row h5 text-left">
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Placa)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Marca)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Modelo)
+            </div>
         </div>
 
+        <hr />
+        <div class="accordion" id="accordionExample">
+            <div class="row font-weight-bold" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                @foreach (var item in Model)
+                {
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Placa)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </div>
+                    <div class="col-5">
+                        <a class="float-right" asp-action="AddEdit" asp-route-id="@item.Id"> Editar</a>
+                    </div>
+                    <div class="col-1">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1 float-left" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir </a>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <a class="btn text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <table class="table">
-                                        <tbody>
-                                            @foreach (var item in Model)
-                                            {
-                                                <tr>
-                                                    <td>@Html.DisplayFor(modelItem => item.Placa)</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Marca)</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Modelo)</td>
-                                                    <td></td>
-                                                    @*<td>
-                                        <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
-                                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
-                                    </td>*@
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>
-                                </a>
-                            </h2>
+                    </div>
+                }
+            </div>
+            <hr />
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="row font-weight-bold">
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.Renavam)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.Cor)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.TipoCarroceria)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.TipoDoVeiculo)
+                    </div>
+                    <div class="col-4">
+                        @Html.DisplayNameFor(model => model.Chassi)
+                    </div>
+                </div>
+
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.Renavam)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.Cor)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.TipoCarroceria)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.TipoDoVeiculo)
+                        </div>
+                        <div class="col-4">
+                            @Html.DisplayFor(model => item.Chassi)
+                        </div>
+                    }
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="row font-weight-bold">
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.AnoFabricacao)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.Odometro)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.Combustivel)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.AnoFabricacao)
+                            </div>
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.Odometro)
+                            </div>
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.Combustivel)
+                            </div>
+                        }
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="row font-weight-bold">
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.NomeDoProprietario)
+                            </div>
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.DocumentoDoProprietario)
+                            </div>
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.LocalDeEmplacamento)
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.NomeDoProprietario)
+                                </div>
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.DocumentoDoProprietario)
+                                </div>
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.LocalDeEmplacamento)
+                                </div>
+                            }
                         </div>
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            <div class="row font-weight-bold">
+                                <div class="col-6">
+                                    @Html.DisplayNameFor(model => model.Observacao)
+                                </div>
+                            </div>
+                            <div class="row">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="col-4">
+                                        @Html.DisplayFor(model => item.Observacao)
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        @*---------------------------------------------------------------------------*@
-
-        @*<div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <a class="btn text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <table class="table">
-                                <tbody>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>@Html.DisplayFor(modelItem => item.Placa)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.Marca)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.Modelo)</td>
-                                            <td>
-                                                <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
-                                                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        </a>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Collapsible Group Item #2
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Collapsible Group Item #3
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-        </div>*@
-
-
-
-
-
-
-
-        @*---------------------------------------------------------------------------*@
-
-
-
-
-
-
-
-
-        @*<p>
-                <a asp-action="AddEdit">Create New</a>
-            </p>*@
-        <div class="row">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Placa)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Renavam)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Marca)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Modelo)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Cor)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Chassi)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.TipoDoVeiculo)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.TipoCarroceria)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.AnoFabricacao)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Odometro)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Combustivel)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.NomeDoProprietario)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.DocumentoDoProprietario)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.LocalDeEmplacamento)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Observacao)
-                        </th>
-
-
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Placa)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Renavam)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Marca)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Modelo)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Cor)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Chassi)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.TipoDoVeiculo)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.TipoCarroceria)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AnoFabricacao)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Odometro)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Combustivel)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.NomeDoProprietario)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.DocumentoDoProprietario)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LocalDeEmplacamento)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Observacao)
-                            </td>
-                            <td>
-                                <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-
     </div>
+</div>
+
