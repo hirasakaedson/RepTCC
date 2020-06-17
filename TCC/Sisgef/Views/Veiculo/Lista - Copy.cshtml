@@ -1,0 +1,159 @@
+﻿@model IEnumerable<Sisgef.Models.Veiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid mt-4 ">
+    <div class="col-12">
+        <h4>Veículos cadastrados</h4>
+        <hr />
+        <div class="row h5 text-left">
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Placa)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Marca)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Modelo)
+            </div>
+        </div>
+        <hr />
+        <div class="accordion" id="accordionExample">
+            <div class="row font-weight-bold" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                @foreach (var item in Model)
+                {
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Placa)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </div>
+                    <div class="col-5">
+                        <a class="float-right" asp-action="AddEdit" asp-route-id="@item.Id"> Editar</a>
+                    </div>
+                    <div class="col-1">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1 float-left" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir </a>
+
+                    </div>
+                }
+            </div>
+            <hr />
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="row font-weight-bold">
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.Renavam)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.Cor)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.TipoCarroceria)
+                    </div>
+                    <div class="col-2">
+                        @Html.DisplayNameFor(model => model.TipoDoVeiculo)
+                    </div>
+                    <div class="col-4">
+                        @Html.DisplayNameFor(model => model.Chassi)
+                    </div>
+                </div>
+
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.Renavam)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.Cor)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.TipoCarroceria)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayFor(model => item.TipoDoVeiculo)
+                        </div>
+                        <div class="col-4">
+                            @Html.DisplayFor(model => item.Chassi)
+                        </div>
+                    }
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="row font-weight-bold">
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.AnoFabricacao)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.Odometro)
+                        </div>
+                        <div class="col-2">
+                            @Html.DisplayNameFor(model => model.Combustivel)
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.AnoFabricacao)
+                            </div>
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.Odometro)
+                            </div>
+                            <div class="col-2">
+                                @Html.DisplayFor(model => item.Combustivel)
+                            </div>
+                        }
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="row font-weight-bold">
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.NomeDoProprietario)
+                            </div>
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.DocumentoDoProprietario)
+                            </div>
+                            <div class="col-4">
+                                @Html.DisplayNameFor(model => model.LocalDeEmplacamento)
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.NomeDoProprietario)
+                                </div>
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.DocumentoDoProprietario)
+                                </div>
+                                <div class="col-4">
+                                    @Html.DisplayFor(model => item.LocalDeEmplacamento)
+                                </div>
+                            }
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="row font-weight-bold">
+                                <div class="col-6">
+                                    @Html.DisplayNameFor(model => model.Observacao)
+                                </div>
+                            </div>
+                            <div class="row">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="col-4">
+                                        @Html.DisplayFor(model => item.Observacao)
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -18,6 +18,40 @@ namespace Sisgef.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Sisgef.Models.PostoCombustivel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bairro")
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Bandeira")
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Cnpj")
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Numero")
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Rua")
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("varchar(25)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PostoCombustivel");
+                });
+
             modelBuilder.Entity("Sisgef.Models.Veiculo", b =>
                 {
                     b.Property<int>("Id")
