@@ -8,11 +8,11 @@ using Sisgef.Models;
 
 namespace Sisgef.Controllers
 {
-    public class PostoCombustivelController : Controller
+    public class FornecedorController : Controller
     {
         private readonly ApplicationContext _context;
 
-        public PostoCombustivelController(ApplicationContext context)
+        public FornecedorController(ApplicationContext context)
         {
             _context = context;
         }
@@ -20,39 +20,39 @@ namespace Sisgef.Controllers
         // GET: PostoCombustivel
         public async Task<IActionResult> Lista()
         {
-            return View(await _context.PostoCombustivel.ToListAsync());
+            return View(await _context.Fornecedor.ToListAsync());
         }
 
 
         public IActionResult AddEdit(int id = 0)
         {
             if (id == 0)
-                return View(new PostoCombustivel());
+                return View(new Fornecedor());
             else
-                return View(_context.PostoCombustivel.Find(id));
+                return View(_context.Fornecedor.Find(id));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Id, Cnpj, Nome, Bandeira, Telefone, Rua, Numero, Bairro")] PostoCombustivel postoCombustivel)
+        public async Task<IActionResult> AddEdit([Bind("Id, Tipo, Cnpj, Nome, Bandeira, Contato, Rua, Numero, Bairro")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {
-                if (postoCombustivel.Id == 0)
-                    _context.Add(postoCombustivel);
+                if (fornecedor.Id == 0)
+                    _context.Add(fornecedor);
                 else
-                    _context.Update(postoCombustivel);
+                    _context.Update(fornecedor);
 
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Lista));
             }
-            return View(postoCombustivel);
+            return View(fornecedor);
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
-            var posto = await _context.PostoCombustivel.FindAsync(id);
-            _context.PostoCombustivel.Remove(posto);
+            var fornecedor = await _context.Fornecedor.FindAsync(id);
+            _context.Fornecedor.Remove(fornecedor);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }

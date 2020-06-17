@@ -10,10 +10,14 @@ using System.Threading.Tasks;
 namespace Sisgef.Models
 {
     
-    public class PostoCombustivel
+    public class Fornecedor
     {
         [DataMember]
         public int Id { get; set; }
+
+        [Column(TypeName = "varchar(20)")]
+        [DisplayName("Tipo")]
+        public string Tipo { get; set; }
 
         [Column(TypeName = "varchar(20)")]
         [DisplayName("CNPJ")]
@@ -29,8 +33,8 @@ namespace Sisgef.Models
         public string Bandeira { get; set; }
 
         [Column(TypeName = "varchar(25)")]
-        [DisplayName("Telefone")]
-        public string Telefone { get; set; }
+        [DisplayName("Contato")]
+        public string Contato { get; set; }
 
         [Column(TypeName = "varchar(30)")]
         [DisplayName("Rua")]

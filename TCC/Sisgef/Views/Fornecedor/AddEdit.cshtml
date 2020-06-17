@@ -1,15 +1,22 @@
-﻿@model Sisgef.Models.PostoCombustivel
+﻿@model Sisgef.Models.Fornecedor
 
 @{
     ViewData["Title"] = "Create";
 }
 <div class="container-fluid mt-4">
-    <h4>Cadastro de Posto de combustível</h4>
+    <h4>Cadastro de Fornecedor</h4>
     <hr />
     <form asp-action="AddEdit">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="Id" />
 
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="Tipo" class="control-label"></label>
+                <input asp-for="Tipo" class="form-control" />
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+        </div>
         <div class="row">
             <div class="col-4">
                 <label asp-for="Cnpj" class="control-label"></label>
@@ -31,9 +38,9 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
+                <label asp-for="Contato" class="control-label"></label>
+                <input asp-for="Contato" class="form-control" />
+                <span asp-validation-for="Contato" class="text-danger"></span>
             </div>
         </div>
         <div class="row">

@@ -407,8 +407,6 @@ C:\Users\Hirasaka\source\repos\Tcc\Sisgef\bin\Debug\netcoreapp3.1\Microsoft.Enti
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csproj.CoreCompileInputs.cache
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Hirasaka\source\repos\Tcc\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.MvcApplicationPartsAssemblyInfo.cache
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
-C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -527,6 +525,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
@@ -798,6 +797,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\nativ
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
@@ -816,10 +816,10 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.RazorAssemblyInfo.c
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.TagHelpers.input.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.TagHelpers.output.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.RazorCoreGenerate.cache
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Fornecedor\AddEdit.cshtml.g.cs
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Fornecedor\Lista.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\PostoCombustivel\AddEdit.cshtml.g.cs
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\PostoCombustivel\Lista.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -837,4 +837,3 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\staticwebassets\Sisgef.Sta
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.dll
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.pdb
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.genruntimeconfig.cache
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csprojAssemblyReference.cache

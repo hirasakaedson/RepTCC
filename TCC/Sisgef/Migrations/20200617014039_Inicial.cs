@@ -7,22 +7,23 @@ namespace Sisgef.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "PostoCombustivel",
+                name: "Fornecedor",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Tipo = table.Column<string>(type: "varchar(20)", nullable: true),
                     Cnpj = table.Column<string>(type: "varchar(20)", nullable: true),
                     Nome = table.Column<string>(type: "varchar(20)", nullable: false),
                     Bandeira = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Telefone = table.Column<string>(type: "varchar(25)", nullable: true),
+                    Contato = table.Column<string>(type: "varchar(25)", nullable: true),
                     Rua = table.Column<string>(type: "varchar(30)", nullable: true),
                     Numero = table.Column<string>(type: "varchar(30)", nullable: true),
                     Bairro = table.Column<string>(type: "varchar(30)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PostoCombustivel", x => x.Id);
+                    table.PrimaryKey("PK_Fornecedor", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,7 +57,7 @@ namespace Sisgef.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PostoCombustivel");
+                name: "Fornecedor");
 
             migrationBuilder.DropTable(
                 name: "Veiculo");

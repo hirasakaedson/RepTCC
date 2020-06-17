@@ -9,7 +9,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200617003017_Inicial")]
+    [Migration("20200617014039_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Sisgef.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Sisgef.Models.PostoCombustivel", b =>
+            modelBuilder.Entity("Sisgef.Models.Fornecedor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,6 +36,9 @@ namespace Sisgef.Migrations
                     b.Property<string>("Cnpj")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("Contato")
+                        .HasColumnType("varchar(25)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
@@ -46,12 +49,12 @@ namespace Sisgef.Migrations
                     b.Property<string>("Rua")
                         .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Telefone")
-                        .HasColumnType("varchar(25)");
+                    b.Property<string>("Tipo")
+                        .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("PostoCombustivel");
+                    b.ToTable("Fornecedor");
                 });
 
             modelBuilder.Entity("Sisgef.Models.Veiculo", b =>
