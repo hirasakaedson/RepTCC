@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-<div class="container-fluid mt-4">
+<div class="container-fluid mt-4 font-weight-bold">
     <h4>Cadastro de Veiculo</h4>
     <hr />
     <form asp-action="AddEdit">
@@ -51,10 +51,18 @@
                 <input asp-for="TipoDoVeiculo" class="form-control" />
                 <span asp-validation-for="TipoDoVeiculo" class="text-danger"></span>
             </div>
-            <div class="col-4">
-                <label asp-for="Combustivel" class="control-label"></label>
-                <input asp-for="Combustivel" class="form-control" />
+            <div class=" form-group col-6">
+                <label asp-for="Combustivel" class="control-label" for="Combustivel"></label>
                 <span asp-validation-for="Combustivel" class="text-danger"></span>
+                <label class="control-label" for="Combustivel"></label>
+                <select class="form-control single-select" name="Combustivel">
+                    <option selected value=""> </option>
+                    <option value="GASOLINA">GASOLINA</option>
+                    <option value="ETANOL">ETANOL</option>
+                    <option value="FLEX">FLEX</option>
+                    <option value="DIESEL">DIESEL</option>
+                    <option value="DIESEL S10">DIESEL S10</option>
+                </select>
             </div>
         </div>
         <div class="row">

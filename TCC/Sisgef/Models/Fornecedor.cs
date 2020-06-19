@@ -16,8 +16,9 @@ namespace Sisgef.Models
         public int Id { get; set; }
 
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("Tipo")]
-        public string Tipo { get; set; }
+        [DisplayName("Tipo de serviço")]
+        public string TipoDeServico { get; set; }
+       
 
         [Column(TypeName = "varchar(20)")]
         [DisplayName("CNPJ")]
@@ -29,12 +30,15 @@ namespace Sisgef.Models
         public string Nome { get; set; }
 
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("Bandeira")]
-        public string Bandeira { get; set; }
+        [DisplayName("Observações")]
+        public string Observacoes { get; set; }
 
         [Column(TypeName = "varchar(25)")]
         [DisplayName("Contato")]
         public string Contato { get; set; }
+        [Column(TypeName = "varchar(25)")]
+        [DisplayName("Contato")]
+        public string Contato2 { get; set; }
 
         [Column(TypeName = "varchar(30)")]
         [DisplayName("Rua")]

@@ -12,11 +12,12 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Tipo = table.Column<string>(type: "varchar(20)", nullable: true),
+                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: true),
                     Cnpj = table.Column<string>(type: "varchar(20)", nullable: true),
                     Nome = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Bandeira = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Observacoes = table.Column<string>(type: "varchar(20)", nullable: true),
                     Contato = table.Column<string>(type: "varchar(25)", nullable: true),
+                    Contato2 = table.Column<string>(type: "varchar(25)", nullable: true),
                     Rua = table.Column<string>(type: "varchar(30)", nullable: true),
                     Numero = table.Column<string>(type: "varchar(30)", nullable: true),
                     Bairro = table.Column<string>(type: "varchar(30)", nullable: true)

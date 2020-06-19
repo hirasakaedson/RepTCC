@@ -28,13 +28,13 @@ namespace Sisgef.Migrations
                     b.Property<string>("Bairro")
                         .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Bandeira")
-                        .HasColumnType("varchar(20)");
-
                     b.Property<string>("Cnpj")
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Contato")
+                        .HasColumnType("varchar(25)");
+
+                    b.Property<string>("Contato2")
                         .HasColumnType("varchar(25)");
 
                     b.Property<string>("Nome")
@@ -44,10 +44,13 @@ namespace Sisgef.Migrations
                     b.Property<string>("Numero")
                         .HasColumnType("varchar(30)");
 
+                    b.Property<string>("Observacoes")
+                        .HasColumnType("varchar(20)");
+
                     b.Property<string>("Rua")
                         .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Tipo")
+                    b.Property<string>("TipoDeServico")
                         .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
