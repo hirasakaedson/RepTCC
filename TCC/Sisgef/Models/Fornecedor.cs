@@ -13,6 +13,7 @@ namespace Sisgef.Models
     public class Fornecedor
     {
         [DataMember]
+        [Key]
         public int Id { get; set; }
 
         [Column(TypeName = "varchar(20)")]
@@ -52,7 +53,7 @@ namespace Sisgef.Models
         [DisplayName("Bairro")]
         public string Bairro { get; set; }
 
-
+        public virtual List<Requisicao> Requisicoes { get; set; }
     }
 
 }

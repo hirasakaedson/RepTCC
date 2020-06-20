@@ -12,6 +12,7 @@ namespace Sisgef.Models
     public class BaseModel
     {
         [DataMember]
+        [Key]
         public int Id { get; set; }
     }
     public class Veiculo : BaseModel
@@ -77,7 +78,9 @@ namespace Sisgef.Models
         [DisplayName("Observação")]
         public string Observacao { get; set; }
 
-       
+        public virtual List<Requisicao> Requisicoes { get; set; }
+
+
 
 
     }

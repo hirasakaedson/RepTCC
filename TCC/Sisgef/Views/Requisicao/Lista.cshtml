@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Sisgef.Models.Requisicao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid mt-4 ">
+    <h4>Histórico de requisições</h4>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Data)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UsuarioEmissor)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TipoDeServico)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Observacao)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Motorista)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Valor)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Veiculo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fornecedor)
+                        </th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Data)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UsuarioEmissor)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TipoDeServico)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Observacao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Motorista)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Valor)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Veiculo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fornecedor)
+                            </td>
+                            <td>
+                                <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+    </div>
+
+

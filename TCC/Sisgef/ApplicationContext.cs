@@ -17,8 +17,8 @@ namespace Sisgef
         }
 
         public DbSet<Veiculo> Veiculo { get; set; }
-
         public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<Requisicao> Requisicao { get; set; }
 
     }
 }

@@ -9,8 +9,8 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200619034640_Inicial")]
-    partial class Inicial
+    [Migration("20200620202452_Inicial2")]
+    partial class Inicial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,6 +58,48 @@ namespace Sisgef.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Fornecedor");
+                });
+
+            modelBuilder.Entity("Sisgef.Models.Requisicao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Data")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<int>("FornecedorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Motorista")
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Observacao")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("TipoDeServico")
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("UsuarioEmissor")
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Valor")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("VeiculoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FornecedorId");
+
+                    b.HasIndex("VeiculoId");
+
+                    b.ToTable("Requisicao");
                 });
 
             modelBuilder.Entity("Sisgef.Models.Veiculo", b =>
@@ -116,6 +158,21 @@ namespace Sisgef.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Veiculo");
+                });
+
+            modelBuilder.Entity("Sisgef.Models.Requisicao", b =>
+                {
+                    b.HasOne("Sisgef.Models.Fornecedor", "Fornecedor")
+                        .WithMany("Requisicoes")
+                        .HasForeignKey("FornecedorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Sisgef.Models.Veiculo", "Veiculo")
+                        .WithMany("Requisicoes")
+                        .HasForeignKey("VeiculoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

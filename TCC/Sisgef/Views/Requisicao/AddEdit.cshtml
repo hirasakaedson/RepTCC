@@ -1,0 +1,98 @@
+﻿@model Sisgef.Models.Requisicao
+@{
+    ViewData["Title"] = "AddEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid mt-4">
+    <h4>Requisição</h4>
+    <hr />
+    <form asp-action="AddEdit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model == null || Model.Id == 0)
+        {
+            <input type="hidden" asp-for="Id" value="0" />
+
+        }
+        else
+        {
+            <input type="hidden" asp-for="Id" />
+        }
+
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="UsuarioEmissor" class="control-label"></label>
+                <input asp-for="UsuarioEmissor" class="form-control" />
+                <span asp-validation-for="UsuarioEmissor" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="TipoDeServico" class="control-label"></label>
+                <input asp-for="TipoDeServico" class="form-control" />
+                <span asp-validation-for="TipoDeServico" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <div class="col-6">
+                <label asp-for="Motorista" class="control-label"></label>
+                <input asp-for="Motorista" class="form-control" />
+                <span asp-validation-for="Motorista" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-4">
+                <label asp-for="VeiculoId" class="control-label"></label>
+                <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
+                    <option>
+                        Selecion...
+                    </option>
+                </select>
+
+
+                <span asp-validation-for="VeiculoId" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="FornecedorId" class="control-label"></label>
+                <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
+                    <option>
+                        Selecione...
+                    </option>
+                </select>
+
+                <span asp-validation-for="FornecedorId" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="col-5 float-right">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+        </div>
+
+
+    </form>
+</div>
