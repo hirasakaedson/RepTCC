@@ -19,7 +19,11 @@ namespace Sisgef.Models
         [Column(TypeName = "varchar(20)")]
         [DisplayName("Tipo de serviço")]
         public string TipoDeServico { get; set; }
-       
+
+        [Column(TypeName = "varchar(30)")]
+        [DisplayName("Email")]
+        public string Email { get; set; }
+
 
         [Column(TypeName = "varchar(20)")]
         [DisplayName("CNPJ")]

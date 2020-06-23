@@ -9,8 +9,8 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200620202452_Inicial2")]
-    partial class Inicial2
+    [Migration("20200621233729_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,9 @@ namespace Sisgef.Migrations
 
                     b.Property<string>("Contato2")
                         .HasColumnType("varchar(25)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -110,49 +113,61 @@ namespace Sisgef.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AnoFabricacao")
+                        .IsRequired()
                         .HasColumnType("varchar(15)");
 
                     b.Property<string>("Chassi")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("Combustivel")
+                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Cor")
+                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
-                    b.Property<string>("DocumentoDoProprietario")
+                    b.Property<string>("CpfCnpj")
+                        .IsRequired()
                         .HasColumnType("varchar(25)");
 
                     b.Property<string>("LocalDeEmplacamento")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("Marca")
+                        .IsRequired()
                         .HasColumnType("varchar(25)");
 
                     b.Property<string>("Modelo")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("NomeDoProprietario")
+                        .IsRequired()
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("Observacao")
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Odometro")
+                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Placa")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 
-                    b.Property<string>("Renavam")
-                        .HasColumnType("varchar(20)");
+                    b.Property<int>("Renavam")
+                        .HasColumnType("int");
 
                     b.Property<string>("TipoCarroceria")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("TipoDoVeiculo")
+                        .IsRequired()
                         .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
