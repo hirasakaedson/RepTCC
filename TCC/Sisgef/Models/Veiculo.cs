@@ -74,6 +74,7 @@ namespace Sisgef.Models
         [Required(ErrorMessage = "É necessário preencher o tipo de carroceria")]
         [DisplayName("Tipo de carroceria")]
         public string TipoCarroceria { get; set; }
+
         [Column(TypeName = "varchar(20)")]
         [Required(ErrorMessage = "É necessário preencher a cor")]
         [DisplayName("Cor")]
