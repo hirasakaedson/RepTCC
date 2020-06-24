@@ -34,21 +34,21 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Placa = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Renavam = table.Column<int>(type: "int", nullable: false),
-                    Marca = table.Column<string>(type: "varchar(25)", nullable: false),
-                    Modelo = table.Column<string>(type: "varchar(30)", nullable: false),
-                    Cor = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Chassi = table.Column<string>(type: "varchar(30)", nullable: false),
-                    TipoDoVeiculo = table.Column<string>(type: "varchar(30)", nullable: false),
-                    TipoCarroceria = table.Column<string>(type: "varchar(30)", nullable: false),
-                    AnoFabricacao = table.Column<string>(type: "varchar(15)", nullable: false),
-                    Odometro = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Combustivel = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Renavam = table.Column<string>(type: "varchar(13)", nullable: false),
                     NomeDoProprietario = table.Column<string>(type: "varchar(100)", nullable: false),
-                    CpfCnpj = table.Column<string>(type: "varchar(25)", nullable: false),
-                    LocalDeEmplacamento = table.Column<string>(type: "varchar(30)", nullable: false),
-                    Observacao = table.Column<string>(type: "varchar(50)", nullable: true)
+                    CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Placa = table.Column<string>(type: "varchar(7)", nullable: false),
+                    Chassi = table.Column<string>(type: "varchar(20)", nullable: false),
+                    TipoDoVeiculo = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Combustivel = table.Column<string>(type: "varchar(15)", nullable: false),
+                    Marca = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Modelo = table.Column<string>(type: "varchar(20)", nullable: false),
+                    AnoFabricacao = table.Column<string>(type: "varchar(4)", nullable: false),
+                    TipoCarroceria = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Cor = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Odometro = table.Column<string>(type: "varchar(7)", nullable: false),
+                    Observacao = table.Column<string>(type: "varchar(100)", nullable: true),
+                    LocalDeEmplacamento = table.Column<string>(type: "varchar(30)", nullable: false)
                 },
                 constraints: table =>
                 {
