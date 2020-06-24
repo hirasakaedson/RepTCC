@@ -20,40 +20,41 @@ namespace Sisgef.Models
         [DisplayName("Tipo de serviço")]
         public string TipoDeServico { get; set; }
 
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "varchar(50)")]
         [DisplayName("Email")]
         public string Email { get; set; }
 
 
         [Column(TypeName = "varchar(20)")]
-        [DisplayName("CNPJ")]
-        public string Cnpj { get; set; }
+        [DisplayName("CPF/CNPJ")]
+        public string CpfCnpj { get; set; }
 
-        [Column(TypeName = "varchar(20)")]
-        [Required(ErrorMessage = "É necessário preencher a placa")]
+        [Column(TypeName = "varchar(50)")]
+        [Required(ErrorMessage = "É necessário preencher o nome do emissor")]
         [DisplayName("Nome")]
         public string Nome { get; set; }
 
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "varchar(50)")]
         [DisplayName("Observações")]
         public string Observacoes { get; set; }
 
-        [Column(TypeName = "varchar(25)")]
+        [Column(TypeName = "varchar(15)")]
         [DisplayName("Contato")]
         public string Contato { get; set; }
-        [Column(TypeName = "varchar(25)")]
+
+        [Column(TypeName = "varchar(15)")]
         [DisplayName("Contato")]
         public string Contato2 { get; set; }
 
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "varchar(50)")]
         [DisplayName("Rua")]
         public string Rua { get; set; }
 
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "varchar(6)")]
         [DisplayName("Número")]
         public string Numero { get; set; }
 
-        [Column(TypeName = "varchar(30)")]
+        [Column(TypeName = "varchar(20)")]
         [DisplayName("Bairro")]
         public string Bairro { get; set; }
 

@@ -14,14 +14,14 @@ namespace Sisgef.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: true),
                     Email = table.Column<string>(type: "varchar(30)", nullable: true),
-                    Cnpj = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Nome = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Observacoes = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Contato = table.Column<string>(type: "varchar(25)", nullable: true),
-                    Contato2 = table.Column<string>(type: "varchar(25)", nullable: true),
-                    Rua = table.Column<string>(type: "varchar(30)", nullable: true),
-                    Numero = table.Column<string>(type: "varchar(30)", nullable: true),
-                    Bairro = table.Column<string>(type: "varchar(30)", nullable: true)
+                    CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Nome = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Observacoes = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Contato = table.Column<string>(type: "varchar(15)", nullable: true),
+                    Contato2 = table.Column<string>(type: "varchar(15)", nullable: true),
+                    Rua = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Numero = table.Column<string>(type: "varchar(6)", nullable: true),
+                    Bairro = table.Column<string>(type: "varchar(20)", nullable: true)
                 },
                 constraints: table =>
                 {

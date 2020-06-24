@@ -9,7 +9,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200624005403_Inicial")]
+    [Migration("20200624025344_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,32 +28,32 @@ namespace Sisgef.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Bairro")
-                        .HasColumnType("varchar(30)");
-
-                    b.Property<string>("Cnpj")
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Contato")
-                        .HasColumnType("varchar(25)");
+                        .HasColumnType("varchar(15)");
 
                     b.Property<string>("Contato2")
-                        .HasColumnType("varchar(25)");
+                        .HasColumnType("varchar(15)");
+
+                    b.Property<string>("CpfCnpj")
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Email")
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Numero")
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("varchar(6)");
 
                     b.Property<string>("Observacoes")
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Rua")
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("TipoDeServico")
                         .HasColumnType("varchar(20)");

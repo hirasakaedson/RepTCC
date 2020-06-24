@@ -12,66 +12,66 @@
 
         <div class="row">
             <div class="col-4">
-                <label asp-for="TipoDeServico" class="control-label"></label>
-                <input asp-for="TipoDeServico" class="form-control" />
+                <label asp-for="TipoDeServico" class="control-label font-weight-bold"></label>
+                <input asp-for="TipoDeServico" class="form-control" maxlength="20"/>
                 <span asp-validation-for="TipoDeServico" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
-                <label asp-for="Cnpj" class="control-label"></label>
-                <input asp-for="Cnpj" class="form-control" />
-                <span asp-validation-for="Cnpj" class="text-danger"></span>
+            <div class="col-3">
+                <label asp-for="CpfCnpj" class="control-label font-weight-bold"></label>
+                <input asp-for="CpfCnpj" class="form-control" />
+                <span asp-validation-for="CpfCnpj" class="text-danger"></span>
             </div>
-            <div class="col-4">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+            <div class="col-5">
+                <label asp-for="Email" class="control-label font-weight-bold"></label>
+                <input asp-for="Email" class="form-control" maxlength="40" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
+                <label asp-for="Nome" class="control-label font-weight-bold"></label>
+                <input asp-for="Nome" class="form-control" maxlength="50" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <label asp-for="Contato" class="control-label"></label>
-                <input asp-for="Contato" class="form-control" />
+            <div class="col-3">
+                <label asp-for="Contato" class="control-label font-weight-bold"></label>
+                <input asp-for="Contato" class="form-control" maxlength="15" />
                 <span asp-validation-for="Contato" class="text-danger"></span>
             </div>
-            <div class="col-6">
-                <label asp-for="Contato2" class="control-label"></label>
-                <input asp-for="Contato2" class="form-control" />
+            <div class="col-3">
+                <label asp-for="Contato2" class="control-label font-weight-bold"></label>
+                <input asp-for="Contato2" class="form-control" maxlength="15" />
                 <span asp-validation-for="Contato2" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Rua" class="control-label"></label>
-                <input asp-for="Rua" class="form-control" />
+                <label asp-for="Rua" class="control-label font-weight-bold"></label>
+                <input asp-for="Rua" class="form-control" maxlength="50" />
                 <span asp-validation-for="Rua" class="text-danger"></span>
             </div>
             <div class="col-2">
-                <label asp-for="Numero" class="control-label"></label>
-                <input asp-for="Numero" class="form-control" />
+                <label asp-for="Numero" class="control-label font-weight-bold"></label>
+                <input asp-for="Numero" class="form-control" maxlength="6" />
                 <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="Bairro" class="control-label"></label>
-                <input asp-for="Bairro" class="form-control" />
+                <label asp-for="Bairro" class="control-label font-weight-bold"></label>
+                <input asp-for="Bairro" class="form-control" maxlength="20" />
                 <span asp-validation-for="Bairro" class="text-danger"></span>
             </div>
 
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="Observacoes" class="control-label"></label>
+                <label asp-for="Observacoes" class="control-label font-weight-bold"></label>
                 <input asp-for="Observacoes" class="form-control" />
                 <span asp-validation-for="Observacoes" class="text-danger"></span>
             </div>
@@ -90,4 +90,6 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/validacoesFornecedor.js"></script>
+    <script src="~/js/mascaraTelefone.js"></script>
 }
