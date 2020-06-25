@@ -46,7 +46,7 @@ namespace Sisgef.Models
 
         public virtual Veiculo Veiculo { get; set; }
         [ForeignKey("Veiculo")]
-        [DisplayName("Veiculo")]
+        [DisplayName("Veículo")]
         public int VeiculoId { get; set; }
 
 

@@ -60,10 +60,6 @@ namespace Sisgef.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("TipoDeServico")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Fornecedor");

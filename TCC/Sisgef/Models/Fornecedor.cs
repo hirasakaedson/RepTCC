@@ -9,17 +9,12 @@ using System.Threading.Tasks;
 
 namespace Sisgef.Models
 {
-    
+
     public class Fornecedor
     {
         [DataMember]
         [Key]
         public int Id { get; set; }
-
-        [Column(TypeName = "varchar(20)")]
-        [Required(ErrorMessage = "É necessário preencher o Tipo de serviço")]
-        [DisplayName("Tipo de serviço")]
-        public string TipoDeServico { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [Required(ErrorMessage = "É necessário preencher o Email")]

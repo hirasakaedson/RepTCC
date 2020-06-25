@@ -15,9 +15,6 @@
                             @Html.DisplayNameFor(model => model.CpfCnpj)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.TipoDeServico)
-                        </th>
-                        <th>
                             @Html.DisplayNameFor(model => model.Nome)
                         </th>
                         <th>
@@ -45,46 +42,43 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                    <tr>
+                        <tr>
 
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CpfCnpj)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TipoDeServico)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Observacao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Contato)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Rua)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Numero)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Bairro)
-                        </td>
-                        <td>
-                            <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
-                        </td>
-                    </tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CpfCnpj)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Observacao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contato)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Rua)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Numero)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Bairro)
+                            </td>
+                            <td>
+                                <a asp-action="AddEdit" asp-route-id="@item.Id">Editar</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>
         </div>
     </div>
-        
-    </div>
+
+</div>
 
 

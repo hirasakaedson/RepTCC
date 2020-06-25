@@ -21,14 +21,14 @@
 
         <div class="row">
             <div class="col-4">
-                <label asp-for="Data" class="control-label"></label>
+                <label asp-for="Data" class="control-label font-weight-bold"></label>
                 <input asp-for="Data" type="date" min="2020-01-01" max="2025-01-01" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="Responsavel" class="control-label"></label>
+                <label asp-for="Responsavel" class="control-label font-weight-bold"></label>
                 <input asp-for="Responsavel" class="form-control" />
                 <span asp-validation-for="Responsavel" class="text-danger"></span>
             </div>
@@ -36,29 +36,41 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Motorista" class="control-label"></label>
+                <label asp-for="Motorista" class="control-label font-weight-bold"></label>
                 <input asp-for="Motorista" class="form-control" />
                 <span asp-validation-for="Motorista" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="TipoDeServico" class="control-label"></label>
-                <input asp-for="TipoDeServico" class="form-control" />
+                <label asp-for="TipoDeServico" class="control-label font-weight-bold "></label>
                 <span asp-validation-for="TipoDeServico" class="text-danger"></span>
+                <select class="form-control single-select" name="TipoDeServico">
+                    <option selected value=""></option>
+                    <option value="Abastecimento">Abastecimento</option>
+                    <option value="Borracharia">Borracharia</option>
+                    <option value="Eletrica">Elétrica</option>
+                    <option value="Funilaria">Funilaria</option>
+                    <option value="LavaJato">Lava Jato</option>
+                    <option value="Lanternagem">Funilaria</option>
+                    <option value="Mecanica">Mecânica</option>
+                    <option value="Refrigeracao">Refrigeração</option>
+                    <option value="Suspensao">Suspensao</option>
+                    <option value="TrocaDeOleo">Troca de óleo</option>
+                    <option value="Outros">Outros</option>
+                </select>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Observacao" class="control-label"></label>
-                <input asp-for="Observacao" class="form-control" style="height: 50px  " />
+                <label asp-for="Observacao" class="control-label font-weight-bold"></label>
+                <input asp-for="Observacao" class="form-control" id="Valor" />
                 <span asp-validation-for="Observacao" class="text-danger"></span>
             </div>
-
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="Valor" class="control-label"></label>
+                <label asp-for="Valor" class="control-label font-weight-bold"></label>
                 <input asp-for="Valor" class="form-control" id="Valor" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
@@ -67,7 +79,7 @@
         <div class="row">
 
             <div class="col-4">
-                <label asp-for="VeiculoId" class="control-label"></label>
+                <label asp-for="VeiculoId" class="control-label font-weight-bold"></label>
                 <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
                     <option>
                         Selecione...
@@ -81,7 +93,7 @@
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="FornecedorId" class="control-label"></label>
+                <label asp-for="FornecedorId" class="control-label font-weight-bold"></label>
                 <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
                     <option>
                         Selecione...

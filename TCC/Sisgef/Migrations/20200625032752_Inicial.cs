@@ -13,7 +13,6 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
                     Email = table.Column<string>(type: "varchar(50)", nullable: false),
                     CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: false),
                     Nome = table.Column<string>(type: "varchar(50)", nullable: false),

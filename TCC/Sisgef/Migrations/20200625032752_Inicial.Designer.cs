@@ -10,7 +10,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200625003254_Inicial")]
+    [Migration("20200625032752_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,10 +61,6 @@ namespace Sisgef.Migrations
                     b.Property<string>("Rua")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
-
-                    b.Property<string>("TipoDeServico")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
 
                     b.HasKey("Id");
 
