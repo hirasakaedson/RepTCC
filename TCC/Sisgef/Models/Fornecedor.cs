@@ -17,28 +17,32 @@ namespace Sisgef.Models
         public int Id { get; set; }
 
         [Column(TypeName = "varchar(20)")]
+        [Required(ErrorMessage = "É necessário preencher o Tipo de serviço")]
         [DisplayName("Tipo de serviço")]
         public string TipoDeServico { get; set; }
 
         [Column(TypeName = "varchar(50)")]
+        [Required(ErrorMessage = "É necessário preencher o Email")]
         [DisplayName("Email")]
         public string Email { get; set; }
 
 
         [Column(TypeName = "varchar(20)")]
+        [Required(ErrorMessage = "É necessário preencher o CPF/CNPJ")]
         [DisplayName("CPF/CNPJ")]
         public string CpfCnpj { get; set; }
 
         [Column(TypeName = "varchar(50)")]
-        [Required(ErrorMessage = "É necessário preencher o nome do emissor")]
-        [DisplayName("Nome")]
+        [Required(ErrorMessage = "É necessário preencher o nome do responsável")]
+        [DisplayName("Nome/Razão social")]
         public string Nome { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [DisplayName("Observações")]
-        public string Observacoes { get; set; }
+        public string Observacao { get; set; }
 
         [Column(TypeName = "varchar(15)")]
+        [Required(ErrorMessage = "É necessário preencher o contato")]
         [DisplayName("Contato")]
         public string Contato { get; set; }
 
@@ -47,14 +51,17 @@ namespace Sisgef.Models
         public string Contato2 { get; set; }
 
         [Column(TypeName = "varchar(50)")]
+        [Required(ErrorMessage = "É necessário preencher a Rua")]
         [DisplayName("Rua")]
         public string Rua { get; set; }
 
         [Column(TypeName = "varchar(6)")]
+        [Required(ErrorMessage = "É necessário preencher o número")]
         [DisplayName("Número")]
         public string Numero { get; set; }
 
         [Column(TypeName = "varchar(20)")]
+        [Required(ErrorMessage = "É necessário preencher o Bairro")]
         [DisplayName("Bairro")]
         public string Bairro { get; set; }
 

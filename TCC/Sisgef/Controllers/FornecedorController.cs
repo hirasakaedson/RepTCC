@@ -24,7 +24,7 @@ namespace Sisgef.Controllers
         }
 
 
-        public IActionResult AddEdit(int id = 0)
+        public IActionResult AddEditFornecedor(int id = 0)
         {
             if (id == 0)
                 return View(new Fornecedor());
@@ -34,7 +34,7 @@ namespace Sisgef.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Id, TipoDeServico, CpfCnpj, Email, Nome, Observacoes, Contato, Contato2, Rua, Numero, Bairro")] Fornecedor fornecedor)
+        public async Task<IActionResult> AddEditFornecedor([Bind("Id, TipoDeServico, CpfCnpj, Email, Nome, Observacao, Contato, Contato2, Rua, Numero, Bairro")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {

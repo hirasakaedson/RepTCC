@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Sisgef.Migrations
 {
@@ -12,16 +13,16 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: true),
-                    Email = table.Column<string>(type: "varchar(30)", nullable: true),
-                    CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: true),
+                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: false),
+                    CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: false),
                     Nome = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Observacoes = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Contato = table.Column<string>(type: "varchar(15)", nullable: true),
+                    Observacao = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Contato = table.Column<string>(type: "varchar(15)", nullable: false),
                     Contato2 = table.Column<string>(type: "varchar(15)", nullable: true),
-                    Rua = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Numero = table.Column<string>(type: "varchar(6)", nullable: true),
-                    Bairro = table.Column<string>(type: "varchar(20)", nullable: true)
+                    Rua = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Numero = table.Column<string>(type: "varchar(6)", nullable: false),
+                    Bairro = table.Column<string>(type: "varchar(20)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,12 +62,12 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Data = table.Column<string>(type: "varchar(20)", nullable: false),
-                    UsuarioEmissor = table.Column<string>(type: "varchar(50)", nullable: true),
-                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Data = table.Column<DateTime>(type: "date", nullable: false),
+                    Responsavel = table.Column<string>(type: "varchar(50)", nullable: false),
+                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
                     Observacao = table.Column<string>(type: "varchar(100)", nullable: true),
-                    Motorista = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Valor = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Motorista = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Valor = table.Column<string>(type: "varchar(15)", nullable: false),
                     VeiculoId = table.Column<int>(nullable: false),
                     FornecedorId = table.Column<int>(nullable: false)
                 },

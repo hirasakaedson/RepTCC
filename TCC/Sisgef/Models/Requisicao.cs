@@ -13,15 +13,18 @@ namespace Sisgef.Models
         [Key]
         public int Id { get; set; }
 
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "date")]
+        [Required(ErrorMessage = "É necessário preencher a data")]
         [DisplayName("Data")]
         public DateTime Data { get; set; }
 
         [Column(TypeName = "varchar(50)")]
-        [DisplayName("Emissor")]
-        public string UsuarioEmissor { get; set; }
+        [Required(ErrorMessage = "É necessário informar quem autorizou a requisição")]
+        [DisplayName("Autorizado por")]
+        public string Responsavel { get; set; }
         //tem que criar enum
         [Column(TypeName = "varchar(20)")]
+        [Required(ErrorMessage = "É necessário informar o tipo de serviço")]
         [DisplayName("Tipo de serviço")]
         public string TipoDeServico { get; set; }
 
@@ -30,15 +33,17 @@ namespace Sisgef.Models
         public string Observacao { get; set; }
 
         [Column(TypeName = "varchar(50)")]
+        [Required(ErrorMessage = "É necessário informar o motorista")]
         [DisplayName("Motorista")]
         public string Motorista { get; set; }
 
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "varchar(15)")]
+        [Required(ErrorMessage = "É necessário informar o valor")]
         [DisplayName("Valor")]
-        public decimal Valor { get; set; }
+        public string Valor { get; set; }
 
         [Column(TypeName = "varchar(50)")]
-        
+
         public virtual Veiculo Veiculo { get; set; }
         [ForeignKey("Veiculo")]
         [DisplayName("Veiculo")]
@@ -46,13 +51,12 @@ namespace Sisgef.Models
 
 
         [Column(TypeName = "varchar(50)")]
-       
         public virtual Fornecedor Fornecedor { get; set; }
         [ForeignKey("Fornecedor")]
         [DisplayName("Fornecedor")]
         public int FornecedorId { get; set; }
 
-        
+
 
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Sisgef.Models;
@@ -21,12 +22,15 @@ namespace Sisgef.Controllers
         // GET: Requisicao
         public async Task<IActionResult> Lista()
         {
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+
             return View(await _context.Requisicao.ToListAsync());
         }
         public IActionResult AddEdit(int id = 0)
         {
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(),"Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(),"Id", "Modelo");
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
 
 
             if (id == 0)
@@ -36,7 +40,7 @@ namespace Sisgef.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Id, Data, UsuarioEmissor, TipoDeServico, Observacao, Motorista, Valor, FornecedorId, VeiculoId")] Requisicao requisicao)
+        public async Task<IActionResult> AddEdit([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, FornecedorId, VeiculoId")] Requisicao requisicao)
         {
             if (ModelState.IsValid)
             {
@@ -48,9 +52,13 @@ namespace Sisgef.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Lista));
             }
+          
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+
+
             return View(requisicao);
+
         }
         public async Task<IActionResult> Delete(int? id)
         {
