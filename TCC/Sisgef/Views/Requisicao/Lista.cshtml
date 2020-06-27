@@ -66,7 +66,7 @@
                                 @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
                             </td>
                             <td>
-                                <a asp-action="AddEditFornecedor" asp-route-id="@item.Id">Editar</a> |
+                                @*<a asp-action="AddEditFornecedor" asp-route-id="@item.Id">Editar</a>*@ |
                                 <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir</a>
                             </td>
                         </tr>
