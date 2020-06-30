@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Rotativa.AspNetCore;
 using Sisgef.Models;
 
 namespace Sisgef.Controllers
@@ -52,10 +54,9 @@ namespace Sisgef.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Lista));
             }
-          
+
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
-
 
             return View(requisicao);
 
@@ -67,6 +68,27 @@ namespace Sisgef.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }
+
+        public IActionResult GerarPDF(int id)
+        {
+         
+            return new ViewAsPdf("GerarPDF");
+        }
+
+        public async Task<IActionResult> Edit([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, FornecedorId, VeiculoId")] Requisicao requisicao)
+        {
+            _context.Update(requisicao);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Lista));
+
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+
+            return View(requisicao);
+
+        }
+
     }
 }
 

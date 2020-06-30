@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Rotativa.AspNetCore;
 
 namespace Sisgef
 {
@@ -56,7 +57,7 @@ namespace Sisgef
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
+            RotativaConfiguration.Setup((Microsoft.AspNetCore.Hosting.IHostingEnvironment)env);
 
            
         }
