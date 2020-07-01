@@ -16,6 +16,7 @@ $(document).ready(function () {
 
 
 
+
 $('#Renavam').keypress(function (e) {
     var regex = new RegExp("^[0-9]+$");
     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
@@ -90,14 +91,7 @@ $('#Cor').keypress(function (e) {
     e.preventDefault();
     return false;
 });
-$('#Observacao').keypress(function (e) {
-    var regex = new RegExp("^[a-zA-Z0-9\u00C0-\u00FF ]+$");
-    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (regex.test(str)) {
-        return true;
-    }
-    e.preventDefault();
-    return false;
+
 });
 $('#LocalDeEmplacamento').keypress(function (e) {
     var regex = new RegExp("^[a-zA-Z\u00C0-\u00FF ]+$");
