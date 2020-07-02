@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Sisgef.Migrations
 {
@@ -61,7 +60,7 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Data = table.Column<DateTime>(type: "date", nullable: false),
+                    Data = table.Column<string>(type: "varchar(10)", nullable: false),
                     Responsavel = table.Column<string>(type: "varchar(50)", nullable: false),
                     TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
                     Observacao = table.Column<string>(type: "varchar(100)", nullable: true),

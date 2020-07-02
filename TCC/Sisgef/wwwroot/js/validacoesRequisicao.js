@@ -2,7 +2,10 @@
 $(document).ready(function () {
     $("#Valor").mask("999.999.990,00", { reverse: true })
 })
-
+$(document).ready(function () {
+    $('#Data').mask('99/99/9999');
+    return false;
+});
 
 
 

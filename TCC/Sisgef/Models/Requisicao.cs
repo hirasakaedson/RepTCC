@@ -14,10 +14,10 @@ namespace Sisgef.Models
         [Key]
         public int Id { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "varchar(10)")]
         [Required(ErrorMessage = "É necessário preencher a data")]
         [DisplayName("Data")]
-        public  Data { get; set; }
+        public string Data { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [Required(ErrorMessage = "É necessário informar quem autorizou a requisição")]
