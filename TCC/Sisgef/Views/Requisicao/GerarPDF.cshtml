@@ -6,66 +6,46 @@
 
 
 
-        <div id="geral">
-            <div id="principal">
-                <div id="conteudo-2">
-                    <div id="conteudo-2-1">
 
-                        <img src="~/Imagem/logo.png" height="200" />
-                    </div>
+<div class="container-fluid">
+    <div id="logo"> <img src="~/Imagem/logo.jpg" height="200" /></div>
+    <div id="empresa">
+        <p>Transportadora Company Trucking</p>
+        <p>12.345.678/0001-11</p>
+        <p>BR-364, KM50 - Porto Velho/RO</p>
+        <p>(69) 3222-2222</p>
+    </div>
+    <div id="data">
+        Data: @Model.Data
+    </div>
+    <div id="requisicaonumero">
+        Requisição Nº @Model.Id
+    </div>
+    <div id="bloco1">
+        <dl>
+            <dt>Local do serviço</dt>
+            <dd> @Model.Fornecedor.Nome</dd>
 
-                    <div id="conteudo-2-3">
-                        <p>O nome da sua empresa vai aqui</p>
-                        <p>Aqui o CNPJ</p>
-                        <p>Endereço</p>
-                        <p>Contato</p>
-                    </div>
-                </div>
 
+            <dt>Tipo do serviço</dt>
+            <dd> @Model.TipoDeServico</dd>
+            <dt>Detalhamento</dt>
+            <dd>@Model.Observacao</dd>
 
-
-                <div id="conteudo-3">
-                    <div id="conteudo-3-1">
-                        <dl>
-                            <dt>Data:</dt>
-                            <dd type>@Model.Data</dd>
-                        </dl>
-                        <dl>
-                            <dt>Autorizado por:</dt>
-                            <dd>@Model.Responsavel</dd>
-                        </dl>
-                        <dl>
-                            <dt>Tipo de Serviço:</dt>
-                            <dd>@Model.TipoDeServico</dd>
-                        </dl>
-                        <dl>
-                            <dt>Observação:</dt>
-                            <dd>@Model.Observacao</dd>
-                        </dl>
-                    </div>
-                    <div id="conteudo-3-2">
-                        <dl>
-                            <dt>Valor do serviço:</dt>
-                            <dd>@Model.Valor</dd>
-                        </dl>
-                    </div>
-                    <div id="conteudo-3-3">
-                        <dl>
-                            <dt>Motorista:</dt>
-                            <dd>@Model.Motorista</dd>
-                        </dl>
-
-                        <dl>
-                            <dt>Veículo:</dt>
-                            <dd>@Model.Veiculo.Modelo</dd>
-                        </dl>
-                        <dl>
-                            <dt>Local do serviço:</dt>
-                            <dd>@Model.Fornecedor.Nome</dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-<hr />
-
+        </dl>
+    </div>
+    <div id="bloco2">
+        <dl>
+            <dt>Nome do Motorista</dt>
+            <dd>@Model.Motorista</dd>
+            <dt>Placa do veículo</dt>
+            <dd>@Model.Veiculo.Placa</dd>
+            <dt>Valor</dt>
+            <dd>R$ @Model.Valor</dd>
+        </dl>
+    </div>
+    <div id="bloco3">
+        <p>____________________________________</p>
+        <p>Autorizado por @Model.Responsavel</p>
+    </div>
+</div>

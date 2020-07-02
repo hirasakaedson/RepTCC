@@ -24,14 +24,14 @@ namespace Sisgef.Controllers
         public async Task<IActionResult> Lista()
         {
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
 
             return View(await _context.Requisicao.ToListAsync());
         }
         public IActionResult AddEdit(int id = 0)
         {
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
 
 
             if (id == 0)
