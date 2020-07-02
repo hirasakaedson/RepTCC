@@ -3,12 +3,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+    <link href="~/css/Veiculo.css" rel="stylesheet" />
 <div class="container-fluid mt-4 ">
     <div class="col-12">
         <h4>Veículos cadastrados</h4>
         <hr />
-        <div class="row h5 text-left table-hover">
+        <div class="row h5 text-left" >
             <div class="col-2">
                 @Html.DisplayNameFor(model => model.Placa)
             </div>
@@ -26,13 +26,13 @@
             {
                 <div class="row font-weight-bold" data-toggle="collapse" data-target="#collapse@(item.Id)" aria-expanded="true"
                      aria-controls="collapseOne">
-                    <div class="col-2">
+                    <div class="col-2 btn-link font-weight-bold">
                         @Html.DisplayFor(modelItem => item.Placa)
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 btn-link font-weight-bold">
                         @Html.DisplayFor(modelItem => item.Marca)
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 btn-link font-weight-bold">
                         @Html.DisplayFor(modelItem => item.Modelo)
                     </div>
                     <div class="col-5">
