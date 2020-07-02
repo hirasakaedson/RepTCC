@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Rotativa.AspNetCore;
 
 namespace Sisgef
 {
@@ -34,7 +35,6 @@ namespace Sisgef
         {
             if (env.IsDevelopment())
             {
-
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -45,10 +45,7 @@ namespace Sisgef
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-           
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -58,8 +55,7 @@ namespace Sisgef
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-
-           
+            RotativaConfiguration.Setup((Microsoft.AspNetCore.Hosting.IHostingEnvironment)env);
         }
 
     }

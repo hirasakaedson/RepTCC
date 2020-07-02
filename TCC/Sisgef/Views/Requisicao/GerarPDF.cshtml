@@ -1,0 +1,48 @@
+﻿@model Sisgef.Models.Requisicao
+@{
+    ViewData["Title"] = "AddEdit";
+    Layout = null;
+}
+
+
+
+
+
+
+<div class="container-fluid mt-4">
+    <div class="row printDetails">
+
+        <dl>
+            <dt>Data:</dt>
+            <dd type>@Model.Data</dd>
+        </dl>
+        <dl>
+            <dt>Responsável:</dt>
+            <dd>@Model.Responsavel</dd>
+        </dl>
+        <dl>
+            <dt>Tipo de Serviço:</dt>
+            <dd>@Model.TipoDeServico</dd>
+        </dl>
+        <dl>
+            <dt>Observação:</dt>
+            <dd>@Model.Observacao</dd>
+        </dl>
+        <dl>
+            <dt>Motorista:</dt>
+            <dd>@Model.Motorista</dd>
+        </dl>
+        <dl>
+            <dt>Valor do serviço:</dt>
+            <dd>@Model.Valor</dd>
+        </dl>
+        <dl>
+            <dt>Veículo:</dt>
+            <dd>@Model.Veiculo.Modelo</dd>
+        </dl>
+        <dl>
+            <dt>Local do serviço:</dt>
+            <dd>@Model.Fornecedor.Nome</dd>
+        </dl>
+    </div>
+

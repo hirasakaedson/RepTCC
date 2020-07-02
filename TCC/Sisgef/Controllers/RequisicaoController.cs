@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Rotativa.AspNetCore;
 using Sisgef.Models;
 
 namespace Sisgef.Controllers
@@ -67,6 +68,19 @@ namespace Sisgef.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Lista));
         }
+
+        public async Task<IActionResult> GerarPDF(int id)
+        {
+            var requisicao = await _context.Requisicao
+                .Include(x => x.Fornecedor)
+                .Include(y => y.Veiculo)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            return new ViewAsPdf("GerarPDF", requisicao);
+        }
+
+
+
     }
 }
 

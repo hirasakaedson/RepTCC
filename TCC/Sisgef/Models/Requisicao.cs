@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -16,7 +17,7 @@ namespace Sisgef.Models
         [Column(TypeName = "date")]
         [Required(ErrorMessage = "É necessário preencher a data")]
         [DisplayName("Data")]
-        public DateTime Data { get; set; }
+        public  Data { get; set; }
 
         [Column(TypeName = "varchar(50)")]
         [Required(ErrorMessage = "É necessário informar quem autorizou a requisição")]
