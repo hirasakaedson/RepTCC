@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Sisgef.Models.Veiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/Veiculo.css" rel="stylesheet" />
+<div class="container-fluid mt-4 ">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-4">
+                <h4>Veiculos cadastrados</h4>
+            </div>
+            <div class="col-7">
+                <form asp-action="Lista">
+                    <div class="row" style="float:right">
+                        <div class="col-10">
+                            <input class="form-control" required="required" placeholder="Placa" name="Pesquisa" />
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-success">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div class="row h5 text-left">
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Placa)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Marca)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Modelo)
+            </div>
+        </div>
+        <hr />
+
+        <div class="row" style="text-align:center;">
+            <div class="col-12">
+                <h4>Registro não encontrado</h4>
+                <a href="/Veiculo/Lista" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -9,22 +9,23 @@
 <div class="container-fluid mt-4 ">
     <div class="col-12">
         <div class="row">
-            <form asp-action="Lista">
-                <div class="col-4">
-                    <h4>Fornecedores cadastrados</h4>
-                </div>
-                <div class="col-4">
-                    <input class="form-control" name="Pesquisa" />
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-danger">Pesquisar</button>
-                </div>
-            </form>
+            <div class="col-4">
+                <h4>Fornecedores cadastrados</h4>
+            </div>
+            <div class="col-7">
+                <form asp-action="Lista">
+                    <div class="row" style="float:right">
+                        <div class="col-10">
+                            <input class="form-control"required="required" placeholder="Nome/Razão social" name="Pesquisa"/>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-success">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <hr />
-        <div class="row">
-
-        </div>
         <div class="row h5 text-left">
             <div class="col-3">
                 @Html.DisplayNameFor(model => model.CpfCnpj)
@@ -96,7 +97,6 @@
                             @Html.DisplayFor(model => item.Posto)
                         </div>
                     </div>
-
                 </div>
             }
         </div>

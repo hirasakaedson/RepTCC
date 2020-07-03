@@ -21,12 +21,16 @@ namespace Sisgef.Controllers
         }
 
         // GET: Requisicao
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(string pesquisa = "")
         {
+            if (pesquisa == null)
+            {
+                return View("ListaErro");
+            }
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
 
-            return View(await _context.Requisicao.ToListAsync());
+            return View(await _context.Requisicao.Where(x => x.Veiculo.Placa.Contains(pesquisa)).ToListAsync());
         }
         public IActionResult AddEditServico(int id = 0)
         {

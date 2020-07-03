@@ -20,9 +20,13 @@ namespace Sisgef.Controllers
         }
 
         // GET: Veiculo
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(string pesquisa ="")
         {
-            return View(await _context.Veiculo.ToListAsync());
+            if (pesquisa == null)
+            {
+                return View("ListaErro");
+            }
+            return View(await _context.Veiculo.Where(x => x.Placa.Contains(pesquisa)).ToListAsync());
         }
         public IActionResult AddEditVeiculo(int id = 0)
         {

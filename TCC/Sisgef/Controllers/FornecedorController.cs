@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Sisgef.Models;
 
 namespace Sisgef.Controllers
@@ -20,6 +21,10 @@ namespace Sisgef.Controllers
         // GET: PostoCombustivel
         public async Task<IActionResult> Lista(string pesquisa = "")
         {
+            if (pesquisa == null)
+            {
+                return View("ListaErro");
+            }
             return View(await _context.Fornecedor.Where(x => x.Nome.Contains(pesquisa)).ToListAsync());
         }
 
