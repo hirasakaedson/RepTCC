@@ -8,8 +8,23 @@
 <link href="~/css/Fornecedor.css" rel="stylesheet" />
 <div class="container-fluid mt-4 ">
     <div class="col-12">
-        <h4>Fornecedores cadastrados</h4>
+        <div class="row">
+            <form asp-action="Lista">
+                <div class="col-4">
+                    <h4>Fornecedores cadastrados</h4>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" name="Pesquisa" />
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-danger">Pesquisar</button>
+                </div>
+            </form>
+        </div>
         <hr />
+        <div class="row">
+
+        </div>
         <div class="row h5 text-left">
             <div class="col-3">
                 @Html.DisplayNameFor(model => model.CpfCnpj)
@@ -76,8 +91,8 @@
                             <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Observacao)</a><br />
                             @Html.DisplayFor(model => item.Observacao)
                         </div>
-                        <div class="col-4" hidden >
-                            <a class="font-weight-bold" > @Html.DisplayNameFor(model => model.Posto)</a><br />
+                        <div class="col-4" hidden>
+                            <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Posto)</a><br />
                             @Html.DisplayFor(model => item.Posto)
                         </div>
                     </div>

@@ -76,6 +76,37 @@ namespace Sisgef.Controllers
             return new ViewAsPdf("GerarPDF", requisicao);
         }
 
+
+        public IActionResult AddEditCombustivel(int id = 0)
+        {
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.Where(x => x.Posto=="sim").ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
+
+
+            if (id == 0)
+                return View();
+            else
+                return View(_context.Requisicao.Find(id));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddEditCombustivel([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, Litros, VeiculoId, FornecedorId")] Requisicao requisicao)
+        {
+            if (ModelState.IsValid)
+            {
+                if (requisicao.Id == 0)
+                    _context.Add(requisicao);
+                else
+                    _context.Update(requisicao);
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Lista));
+            }
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
+            return View(requisicao);
+        }
+
     }
 }
 

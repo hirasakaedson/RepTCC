@@ -3,89 +3,90 @@
 @{
     ViewData["Title"] = "Create";
 }
-<div class="container-fluid mt-4">
-    <h4>Cadastro de Fornecedor</h4>
-    <hr />
-    <form asp-action="AddEditFornecedor">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="hidden" asp-for="Id" />
+    <div class="container-fluid mt-4">
+        <h4>Cadastro de Fornecedor</h4>
+        <hr />
+       
+        <form asp-action="AddEditFornecedor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
 
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="Nome" class="control-label font-weight-bold"></label>
-                <input asp-for="Nome" class="form-control" maxlength="50" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+            <div class="row">
+                <div class="col-6">
+                    <label asp-for="Nome" class="control-label font-weight-bold"></label>
+                    <input asp-for="Nome" class="form-control" maxlength="50" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="col-3">
+                    <label asp-for="Posto" class="control-label font-weight-bold "></label>
+                    <span asp-validation-for="Posto" class="text-danger"></span>
+                    <select class="form-control single-select" name="Posto">
+                        <option selected value="nao"></option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-3">
-                <label asp-for="Posto" class="control-label font-weight-bold "></label>
-                <span asp-validation-for="Posto" class="text-danger"></span>
-                <select class="form-control single-select" name="Posto">
-                    <option selected value="nao"></option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <label asp-for="CpfCnpj" class="control-label font-weight-bold"></label>
-                <input asp-for="CpfCnpj" class="form-control" />
-                <span asp-validation-for="CpfCnpj" class="text-danger"></span>
-            </div>
-            <div class="col-5">
-                <label asp-for="Email" class="control-label font-weight-bold"></label>
-                <input asp-for="Email" class="form-control" maxlength="40" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-3">
-                <label asp-for="Contato" class="control-label font-weight-bold"></label>
-                <input asp-for="Contato" class="form-control" maxlength="15" />
-                <span asp-validation-for="Contato" class="text-danger"></span>
-            </div>
-            <div class="col-3">
-                <label asp-for="Contato2" class="control-label font-weight-bold"></label>
-                <input asp-for="Contato2" class="form-control" maxlength="15" />
-                <span asp-validation-for="Contato2" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="Rua" class="control-label font-weight-bold"></label>
-                <input asp-for="Rua" class="form-control" maxlength="50" />
-                <span asp-validation-for="Rua" class="text-danger"></span>
-            </div>
-            <div class="col-2">
-                <label asp-for="Numero" class="control-label font-weight-bold"></label>
-                <input asp-for="Numero" class="form-control" maxlength="6" />
-                <span asp-validation-for="Numero" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <label asp-for="Bairro" class="control-label font-weight-bold"></label>
-                <input asp-for="Bairro" class="form-control" maxlength="20" />
-                <span asp-validation-for="Bairro" class="text-danger"></span>
+            <div class="row">
+                <div class="col-3">
+                    <label asp-for="CpfCnpj" class="control-label font-weight-bold"></label>
+                    <input asp-for="CpfCnpj" class="form-control" />
+                    <span asp-validation-for="CpfCnpj" class="text-danger"></span>
+                </div>
+                <div class="col-5">
+                    <label asp-for="Email" class="control-label font-weight-bold"></label>
+                    <input asp-for="Email" class="form-control" maxlength="40" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
             </div>
 
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <label asp-for="Observacao" class="control-label font-weight-bold"></label>
-                <input asp-for="Observacao" class="form-control" />
-                <span asp-validation-for="Observacao" class="text-danger"></span>
+            <div class="row">
+                <div class="col-3">
+                    <label asp-for="Contato" class="control-label font-weight-bold"></label>
+                    <input asp-for="Contato" class="form-control" maxlength="15" />
+                    <span asp-validation-for="Contato" class="text-danger"></span>
+                </div>
+                <div class="col-3">
+                    <label asp-for="Contato2" class="control-label font-weight-bold"></label>
+                    <input asp-for="Contato2" class="form-control" maxlength="15" />
+                    <span asp-validation-for="Contato2" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label asp-for="Rua" class="control-label font-weight-bold"></label>
+                    <input asp-for="Rua" class="form-control" maxlength="50" />
+                    <span asp-validation-for="Rua" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Numero" class="control-label font-weight-bold"></label>
+                    <input asp-for="Numero" class="form-control" maxlength="6" />
+                    <span asp-validation-for="Numero" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="Bairro" class="control-label font-weight-bold"></label>
+                    <input asp-for="Bairro" class="form-control" maxlength="20" />
+                    <span asp-validation-for="Bairro" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="Observacao" class="control-label font-weight-bold"></label>
+                    <input asp-for="Observacao" class="form-control" />
+                    <span asp-validation-for="Observacao" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col-5 float-right">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
 
-        </div>
-        <div class="col-5 float-right">
-            <input type="submit" value="Salvar" class="btn btn-primary" />
-        </div>
 
-
-    </form>
-</div>
+        </form>
+    </div>
 
 
 

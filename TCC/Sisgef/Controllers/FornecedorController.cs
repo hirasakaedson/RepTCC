@@ -18,9 +18,9 @@ namespace Sisgef.Controllers
         }
 
         // GET: PostoCombustivel
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(string pesquisa = "")
         {
-            return View(await _context.Fornecedor.ToListAsync());
+            return View(await _context.Fornecedor.Where(x => x.Nome.Contains(pesquisa)).ToListAsync());
         }
 
 

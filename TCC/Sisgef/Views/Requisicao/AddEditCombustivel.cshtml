@@ -1,12 +1,12 @@
 ﻿@model Sisgef.Models.Requisicao
 @{
-    ViewData["Title"] = "AddEdit";
+    ViewData["Title"] = "AddEditCombustivel";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid mt-4">
-    <h4>Requisição de serviços</h4>
+    <h4>Requisição de Combustível</h4>
     <hr />
-    <form asp-action="AddEditServico">
+    <form asp-action="AddEditCombustivel">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if (Model == null || Model.Id == 0)
         {
@@ -16,7 +16,6 @@
         {
             <input type="hidden" asp-for="Id" />
         }
-
         <div class="row">
             <div class="col-4">
                 <label asp-for="Data" class="control-label font-weight-bold"></label>
@@ -30,51 +29,8 @@
                 <input asp-for="Responsavel" class="form-control" />
                 <span asp-validation-for="Responsavel" class="text-danger"></span>
             </div>
-
         </div>
         <div class="row">
-            <div class="col-6">
-                <label asp-for="Motorista" class="control-label font-weight-bold"></label>
-                <input asp-for="Motorista" class="form-control" />
-                <span asp-validation-for="Motorista" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="TipoDeServico" class="control-label font-weight-bold "></label>
-                <span asp-validation-for="TipoDeServico" class="text-danger"></span>
-                <select class="form-control single-select" name="TipoDeServico">
-                    <option selected value=""></option>
-                    <option value="Borracharia">Borracharia</option>
-                    <option value="Eletrica">Elétrica</option>
-                    <option value="Funilaria">Funilaria</option>
-                    <option value="LavaJato">Lava Jato</option>
-                    <option value="Lanternagem">Lanternagem</option>
-                    <option value="Mecanica">Mecânica</option>
-                    <option value="Refrigeracao">Refrigeração</option>
-                    <option value="Suspensao">Suspensao</option>
-                    <option value="TrocaDeOleo">Troca de óleo</option>
-                    <option value="Outros">Outros</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="Observacao" class="control-label font-weight-bold"></label>
-                <input asp-for="Observacao" class="form-control" id="Valor" />
-                <span asp-validation-for="Observacao" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="Valor" class="control-label font-weight-bold"></label>
-                <input asp-for="Valor" class="form-control" id="Valor" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="row">
-
             <div class="col-4">
                 <label asp-for="VeiculoId" class="control-label font-weight-bold"></label>
                 <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
@@ -84,7 +40,6 @@
                 </select>
                 <span asp-validation-for="VeiculoId" class="text-danger"></span>
             </div>
-
         </div>
         <div class="row">
             <div class="col-4">
@@ -97,12 +52,28 @@
                 <span asp-validation-for="FornecedorId" class="text-danger"></span>
             </div>
         </div>
-        <div class="col-5 float-right">
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Motorista" class="control-label font-weight-bold"></label>
+                <input asp-for="Motorista" class="form-control" />
+                <span asp-validation-for="Motorista" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label asp-for="Valor" class="control-label font-weight-bold"></label>
+                <input asp-for="Valor" class="form-control" id="Valor" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="Litros" class="control-label font-weight-bold"></label>
+                <input asp-for="Litros" class="form-control" id="Litros" />
+                <span asp-validation-for="Litros" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-6 float-right">
             <input type="submit" value="Salvar" class="btn btn-primary" />
         </div>
-
-
-
     </form>
 </div>
 
