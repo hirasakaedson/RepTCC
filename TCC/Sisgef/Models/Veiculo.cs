@@ -45,6 +45,10 @@ namespace Sisgef.Models
         [DisplayName("Chassi")]
         public string Chassi { get; set; }
 
+        [Column(TypeName = "varchar(3)")]
+        [DisplayName("Veiculo pertence a empresa?")]
+        public string Proprio { get; set; }
+
         [Column(TypeName = "varchar(20)")]
         [Required(ErrorMessage = "É necessário preencher o tipo de veiculo")]
         [DisplayName("Tipo do Veículo")]

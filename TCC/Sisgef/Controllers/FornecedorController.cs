@@ -34,7 +34,7 @@ namespace Sisgef.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEditFornecedor([Bind("Id, CpfCnpj, Email, Nome, Observacao, Contato, Contato2, Rua, Numero, Bairro")] Fornecedor fornecedor)
+        public async Task<IActionResult> AddEditFornecedor([Bind("Id, Email, CpfCnpj, Nome, Observacao, Contato, Contato2, Posto, Rua, Numero, Bairro")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {

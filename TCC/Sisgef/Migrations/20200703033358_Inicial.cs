@@ -18,6 +18,7 @@ namespace Sisgef.Migrations
                     Observacao = table.Column<string>(type: "varchar(50)", nullable: true),
                     Contato = table.Column<string>(type: "varchar(15)", nullable: false),
                     Contato2 = table.Column<string>(type: "varchar(15)", nullable: true),
+                    Posto = table.Column<string>(type: "varchar(3)", nullable: true),
                     Rua = table.Column<string>(type: "varchar(50)", nullable: false),
                     Numero = table.Column<string>(type: "varchar(6)", nullable: false),
                     Bairro = table.Column<string>(type: "varchar(20)", nullable: false)
@@ -38,6 +39,7 @@ namespace Sisgef.Migrations
                     CpfCnpj = table.Column<string>(type: "varchar(20)", nullable: false),
                     Placa = table.Column<string>(type: "varchar(7)", nullable: false),
                     Chassi = table.Column<string>(type: "varchar(20)", nullable: false),
+                    Proprio = table.Column<string>(type: "varchar(3)", nullable: true),
                     TipoDoVeiculo = table.Column<string>(type: "varchar(20)", nullable: false),
                     Combustivel = table.Column<string>(type: "varchar(15)", nullable: false),
                     Marca = table.Column<string>(type: "varchar(20)", nullable: false),
@@ -65,7 +67,8 @@ namespace Sisgef.Migrations
                     TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
                     Observacao = table.Column<string>(type: "varchar(100)", nullable: true),
                     Motorista = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Valor = table.Column<string>(type: "varchar(15)", nullable: false),
+                    Valor = table.Column<string>(type: "varchar(15)", nullable: true),
+                    Litros = table.Column<string>(type: "varchar(15)", nullable: true),
                     VeiculoId = table.Column<int>(nullable: false),
                     FornecedorId = table.Column<int>(nullable: false)
                 },

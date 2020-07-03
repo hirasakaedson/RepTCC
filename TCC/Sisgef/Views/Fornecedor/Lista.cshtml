@@ -38,7 +38,7 @@
                         @Html.DisplayFor(modelItem => item.Contato)
                     </div>
                     <div class="col-2">
-                        <a class="float-right" asp-action="AddEdit" asp-route-id="@item.Id"> Editar</a>
+                        <a class="float-right" asp-action="AddEditFornecedor" asp-route-id="@item.Id"> Editar</a>
                     </div>
                     <div class="col-1">
                         <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1 float-left" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir </a>
@@ -75,6 +75,10 @@
                         <div class="col-4">
                             <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Observacao)</a><br />
                             @Html.DisplayFor(model => item.Observacao)
+                        </div>
+                        <div class="col-4" hidden >
+                            <a class="font-weight-bold" > @Html.DisplayNameFor(model => model.Posto)</a><br />
+                            @Html.DisplayFor(model => item.Posto)
                         </div>
                     </div>
 

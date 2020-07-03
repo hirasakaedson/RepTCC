@@ -24,10 +24,7 @@ namespace Sisgef.Controllers
         {
             return View(await _context.Veiculo.ToListAsync());
         }
-
-        
-        
-        public IActionResult AddEdit(int id = 0)
+        public IActionResult AddEditVeiculo(int id = 0)
         {
             
             if (id == 0)
@@ -38,7 +35,7 @@ namespace Sisgef.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Placa,Marca,Modelo,Id, TipoDoVeiculo, TipoCarroceria,AnoFabricacao,Odometro,Combustivel, NomeDoProprietario,CpfCnpj,LocalDeEmplacamento,Observacao,Renavam,Cor, Chassi")] Veiculo veiculo)
+        public async Task<IActionResult> AddEditVeiculo([Bind("Renavam, NomeDoProprietario, CpfCnpj, Placa, Chassi, Proprio, TipoDoVeiculo, Combustivel, Marca, Modelo, AnoFabricacao, TipoCarroceria, Cor, Odometro, Observacao,LocalDeEmplacamento ")] Veiculo veiculo)
         {
             if (ModelState.IsValid)
             {

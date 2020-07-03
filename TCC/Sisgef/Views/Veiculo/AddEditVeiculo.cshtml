@@ -8,7 +8,7 @@
 <div class="container-fluid mt-4 ">
     <h4>Cadastro de Veículo</h4>
     <hr />
-    <form asp-action="AddEdit">
+    <form asp-action="AddEditVeiculo">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="Id" />
 
@@ -17,6 +17,15 @@
                 <label asp-for="Renavam" class="control-label font-weight-bold"></label>
                 <input asp-for="Renavam" class="form-control" maxlength="13" />
                 <span asp-validation-for="Renavam" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="Proprio" class="control-label font-weight-bold "></label>
+                <span asp-validation-for="Proprio" class="text-danger"></span>
+                <select class="form-control single-select" name="Proprio">
+                    <option selected value="nao"></option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
             </div>
         </div>
         <div class="row">

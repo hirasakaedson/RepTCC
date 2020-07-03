@@ -28,7 +28,7 @@ namespace Sisgef.Controllers
 
             return View(await _context.Requisicao.ToListAsync());
         }
-        public IActionResult AddEdit(int id = 0)
+        public IActionResult AddEditServico(int id = 0)
         {
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
@@ -41,7 +41,7 @@ namespace Sisgef.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEdit([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, FornecedorId, VeiculoId")] Requisicao requisicao)
+        public async Task<IActionResult> AddEditServico([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, Litros, VeiculoId, FornecedorId")] Requisicao requisicao)
         {
             if (ModelState.IsValid)
             {
@@ -53,14 +53,11 @@ namespace Sisgef.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Lista));
             }
-          
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
-
-
             return View(requisicao);
-
         }
+
         public async Task<IActionResult> Delete(int? id)
         {
             var veiculo = await _context.Requisicao.FindAsync(id);
@@ -79,41 +76,6 @@ namespace Sisgef.Controllers
             return new ViewAsPdf("GerarPDF", requisicao);
         }
 
-        public IActionResult AddEditAbastecimento(int id = 0)
-        {
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
-
-
-            if (id == 0)
-                return View();
-            else
-                return View(_context.Requisicao.Find(id));
-        }
-
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEditAbastecimento([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, FornecedorId, VeiculoId")] Requisicao requisicao)
-        {
-            if (ModelState.IsValid)
-            {
-                if (requisicao.Id == 0)
-                    _context.Add(requisicao);
-                else
-                    _context.Update(requisicao);
-
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Lista));
-            }
-
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Modelo");
-
-
-            return View(requisicao);
-
-        }
     }
 }
 

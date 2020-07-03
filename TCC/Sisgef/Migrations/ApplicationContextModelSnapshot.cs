@@ -55,6 +55,9 @@ namespace Sisgef.Migrations
                     b.Property<string>("Observacao")
                         .HasColumnType("varchar(50)");
 
+                    b.Property<string>("Posto")
+                        .HasColumnType("varchar(3)");
+
                     b.Property<string>("Rua")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
@@ -78,6 +81,9 @@ namespace Sisgef.Migrations
                     b.Property<int>("FornecedorId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Litros")
+                        .HasColumnType("varchar(15)");
+
                     b.Property<string>("Motorista")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
@@ -94,7 +100,6 @@ namespace Sisgef.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Valor")
-                        .IsRequired()
                         .HasColumnType("varchar(15)");
 
                     b.Property<int>("VeiculoId")
@@ -162,6 +167,9 @@ namespace Sisgef.Migrations
                     b.Property<string>("Placa")
                         .IsRequired()
                         .HasColumnType("varchar(7)");
+
+                    b.Property<string>("Proprio")
+                        .HasColumnType("varchar(3)");
 
                     b.Property<string>("Renavam")
                         .IsRequired()
