@@ -825,7 +825,6 @@ C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Projetos\RepTCC\TCC\Sisgef\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csprojAssemblyReference.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.AssemblyInfoInputs.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.AssemblyInfo.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csproj.CoreCompileInputs.cache
