@@ -1,12 +1,12 @@
 ﻿@model Sisgef.Models.Requisicao
 @{
-    ViewData["Title"] = "AddEdit";
+    ViewData["Title"] = "AddEditAbastecimento";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid mt-4">
-    <h4>Requisição</h4>
+    <h4>Requisição para abastecimento</h4>
     <hr />
-    <form asp-action="AddEdit">
+    <form asp-action="AddEditAbastecimento">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if (Model == null || Model.Id == 0)
         {
@@ -41,23 +41,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
-                <label asp-for="TipoDeServico" class="control-label font-weight-bold "></label>
-                <span asp-validation-for="TipoDeServico" class="text-danger"></span>
-                <select class="form-control single-select" name="TipoDeServico">
-                    <option selected value=""></option>
-                    <option value="Abastecimento">Abastecimento</option>
-                    <option value="Borracharia">Borracharia</option>
-                    <option value="Eletrica">Elétrica</option>
-                    <option value="Funilaria">Funilaria</option>
-                    <option value="LavaJato">Lava Jato</option>
-                    <option value="Lanternagem">Funilaria</option>
-                    <option value="Mecanica">Mecânica</option>
-                    <option value="Refrigeracao">Refrigeração</option>
-                    <option value="Suspensao">Suspensao</option>
-                    <option value="TrocaDeOleo">Troca de óleo</option>
-                    <option value="Outros">Outros</option>
+            <div class="col-4">
+                <label asp-for="VeiculoId" class="control-label font-weight-bold"></label>
+                <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
+                    <option>
+                        Selecione...
+                    </option>
                 </select>
+                <span asp-validation-for="VeiculoId" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
@@ -77,22 +68,12 @@
 
         <div class="row">
 
-            <div class="col-4">
-                <label asp-for="VeiculoId" class="control-label font-weight-bold"></label>
-                <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
-                    <option>
-                        Selecione...
-                    </option>
-                </select>
-
-
-                <span asp-validation-for="VeiculoId" class="text-danger"></span>
-            </div>
+          
 
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="FornecedorId" class="control-label font-weight-bold"></label>
+                <label asp-for="FornecedorId" class="control-label font-weight-bold">Posto</label>
                 <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
                     <option>
                         Selecione...

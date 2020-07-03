@@ -45,6 +45,10 @@ namespace Sisgef.Models
         [DisplayName("Contato")]
         public string Contato2 { get; set; }
 
+        [Column(TypeName = "bool")]
+        [DisplayName("É posto de combustível?")]
+        public string posto { get; set; }
+
         [Column(TypeName = "varchar(50)")]
         [Required(ErrorMessage = "É necessário preencher a Rua")]
         [DisplayName("Rua")]
