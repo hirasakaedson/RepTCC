@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-2">
                 <label asp-for="Valor" class="control-label font-weight-bold"></label>
-                <input asp-for="Valor" class="form-control" id="Valor" />
+                <input asp-for="Valor" class="form-control money" id="Valor" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
             <div class="col-2">
@@ -79,6 +79,15 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/jquery.mask.min.js"></script>
     <script src="~/js/validacoesRequisicao.js"></script>
-    <script src="~/js/mascaraTelefone.js"></script>
+    <script src="~/js/mascaraMoeda.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.money').mask("000.000.000.000.000,00", { reverse: true });
+            $('.money2').mask("#.##0,00", { reverse: true });
+        });
+    </script>
+    
+
 }

@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-6">
                 <label asp-for="Valor" class="control-label font-weight-bold"></label>
-                <input asp-for="Valor" class="form-control" />
+                <input asp-for="Valor" class="money form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
         </div>
@@ -81,14 +81,6 @@
                 <span asp-validation-for="FornecedorId" class="text-danger"></span>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-6">
-                <label asp-for="Valor" class="control-label font-weight-bold"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-        </div>
         <div class="col-5 float-right">
             <input type="submit" value="Salvar" class="btn btn-primary" />
         </div>
@@ -97,6 +89,12 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/jquery.mask.min.js"></script>
     <script src="~/js/validacoesRequisicao.js"></script>
-    <script src="~/js/mascaraMoeda.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.money').mask("000.000.000.000.000,00", { reverse: true });
+            $('.money2').mask("#.##0,00", { reverse: true });
+        });
+    </script>
 }
