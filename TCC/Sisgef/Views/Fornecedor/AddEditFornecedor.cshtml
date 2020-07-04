@@ -17,7 +17,7 @@
                     <input asp-for="Nome" class="form-control" maxlength="50" />
                     <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <label asp-for="Posto" class="control-label font-weight-bold "></label>
                     <span asp-validation-for="Posto" class="text-danger"></span>
                     <select class="form-control single-select" name="Posto">
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-4">
                     <label asp-for="Observacao" class="control-label font-weight-bold"></label>
-                    <input asp-for="Observacao" class="form-control" />
+                    <input asp-for="Observacao" class="form-control" maxlength="60" />
                     <span asp-validation-for="Observacao" class="text-danger"></span>
                 </div>
 

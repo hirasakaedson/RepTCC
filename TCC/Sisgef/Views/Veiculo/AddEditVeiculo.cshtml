@@ -52,39 +52,16 @@
                 <span asp-validation-for="Chassi" class="text-danger"></span>
             </div>
         </div>
-
         <div class="row">
             <div class="col-4">
-                <label asp-for="TipoDoVeiculo" class="control-label font-weight-bold "></label>
+                <label asp-for="TipoDoVeiculo" class="control-label font-weight-bold"></label>
+                <input asp-for="TipoDoVeiculo" type="text" name="TipoDoVeiculo" class="form-control" />
                 <span asp-validation-for="TipoDoVeiculo" class="text-danger"></span>
-                <select class="form-control single-select" name="TipoDoVeiculo">
-                    <option selected value=""></option>
-                    <option value="Automvel">Automovel</option>
-                    <option value="Pick-up">Pick-up</option>
-                    <option value="Van">Van</option>
-                    <option value="Caminhonete">Caminhonete</option>
-                    <option value="Toco">Toco</option>
-                    <option value="Truck">Truck</option>
-                    <option value="Caminhão">Caminhão</option>
-                    <option value="Carreta">Carreta</option>
-                    <option value="Dolly">Dolly</option>
-                </select>
             </div>
-            <div class=" form-group col-2">
-                <label asp-for="Combustivel" class="control-label font-weight-bold" for="Combustivel"></label>
+            <div class="col-4">
+                <label asp-for="Combustivel" class="control-label font-weight-bold"></label>
+                <input asp-for="Combustivel" class="form-control" type="text" maxlength="10" />
                 <span asp-validation-for="Combustivel" class="text-danger"></span>
-                <label class="control-label" for="Combustivel"></label>
-                <select class="form-control single-select" name="Combustivel">
-                    <option selected value=""> </option>
-                    <option value="Gasolina">Gasolina</option>
-                    <option value="Etanol">Etanol</option>
-                    <option value="Flex">Flex</option>
-                    <option value="Diesel">Diesel</option>
-                    <option value="Diesel S10">Diesel S10</option>
-                    <option value="Eletrico">Eletrico</option>
-                    <option value="Gas">Gás</option>
-                    <option value="NaoPossui">Não possui</option>
-                </select>
             </div>
         </div>
         <div class="row">
@@ -125,15 +102,20 @@
             </div>
             <div class="col-4">
                 <label asp-for="Observacao" class="control-label font-weight-bold"></label>
-                <input asp-for="Observacao" class="form-control" maxlength="100" />
+                <input asp-for="Observacao" class="form-control" maxlength="50" />
                 <span asp-validation-for="Observacao" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <label asp-for="LocalDeEmplacamento" class="control-label font-weight-bold"></label>
-                <input asp-for="LocalDeEmplacamento" class="form-control" maxlength="30" />
-                <span asp-validation-for="LocalDeEmplacamento" class="text-danger"></span>
+                <label asp-for="CidadeDeEmplacamento" class="control-label font-weight-bold"></label>
+                <input asp-for="CidadeDeEmplacamento" class="form-control" maxlength="30" />
+                <span asp-validation-for="CidadeDeEmplacamento" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="EstadoEmplacamento" class="control-label font-weight-bold"></label>
+                <input asp-for="EstadoEmplacamento" class="form-control" maxlength="15" />
+                <span asp-validation-for="EstadoEmplacamento" class="text-danger"></span>
             </div>
         </div>
         <div class="col-8">
@@ -152,3 +134,24 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script src="~/js/validacoesVeiculo.js"></script>
 }
+
+
+
+
+@*<div class="row">
+    <div class="col-4">
+        <label asp-for="TipoDoVeiculo" class="control-label font-weight-bold "></label>
+        <span asp-validation-for="TipoDoVeiculo" class="text-danger"></span>
+        <select class="form-control single-select" name="TipoDoVeiculo">
+            <option selected value=""></option>
+            <option value="Automvel">Automovel</option>
+            <option value="Pick-up">Pick-up</option>
+            <option value="Van">Van</option>
+            <option value="Caminhonete">Caminhonete</option>
+            <option value="Toco">Toco</option>
+            <option value="Truck">Truck</option>
+            <option value="Caminhão">Caminhão</option>
+            <option value="Carreta">Carreta</option>
+            <option value="Dolly">Dolly</option>
+        </select>
+    </div>*@

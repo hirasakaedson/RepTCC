@@ -17,7 +17,7 @@ $('#Email').keypress(function (e) {
     return false;
 });
 $('#Nome').keypress(function (e) {
-    var regex = new RegExp("^[a-zA-Z\u00C0-\u00FF ]+$");
+    var regex = new RegExp("^[a-zA-Z0-9.\u00C0-\u00FF ]+$");
     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     if (regex.test(str)) {
         return true;

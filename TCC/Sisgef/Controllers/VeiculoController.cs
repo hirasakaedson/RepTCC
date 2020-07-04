@@ -46,7 +46,7 @@ namespace Sisgef.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEditVeiculo([Bind("Renavam, NomeDoProprietario, CpfCnpj, Placa, Chassi, Proprio, TipoDoVeiculo, Combustivel, Marca, Modelo, AnoFabricacao, TipoCarroceria, Cor, Odometro, Observacao,LocalDeEmplacamento ")] Veiculo veiculo)
+        public async Task<IActionResult> AddEditVeiculo([Bind("Id, Renavam, NomeDoProprietario, CpfCnpj, Placa, Chassi, Proprio, TipoDoVeiculo, Combustivel, Marca, Modelo, AnoFabricacao, TipoCarroceria, Cor, Odometro, Observacao,CidadeDeEmplacamento, EstadoEmplacamento ")] Veiculo veiculo)
         {
             if (ModelState.IsValid)
             {

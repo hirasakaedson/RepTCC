@@ -16,8 +16,26 @@ $('#NomeDoProprietario').keypress(function (e) {
     e.preventDefault();
     return false;
 });
+$('#TipoDoVeiculo').keypress(function (e) {
+    var regex = new RegExp("^[a-zA-Z\u00C0-\u00FF ]+$");
+    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(str)) {
+        return true;
+    }
+    e.preventDefault();
+    return false;
+});
 $('#Placa').keypress(function (e) {
     var regex = new RegExp("^[a-zA-Z0-9]+$");
+    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(str)) {
+        return true;
+    }
+    e.preventDefault();
+    return false;
+});
+$('#Combustivel').keypress(function (e) {
+    var regex = new RegExp("^[a-zA-Z0-9\u00C0-\u00FF ]+$");
     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     if (regex.test(str)) {
         return true;
@@ -35,9 +53,8 @@ $('#Chassi').keypress(function (e) {
     return false;
 });
 
-
 $('#Marca').keypress(function (e) {
-    var regex = new RegExp("^[a-zA-Z0-9\u00C0-\u00FF ]+$");
+    var regex = new RegExp("^[a-zA-Z\u00C0-\u00FF ]+$");
     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     if (regex.test(str)) {
         return true;

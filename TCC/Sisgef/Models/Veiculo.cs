@@ -95,8 +95,13 @@ namespace Sisgef.Models
 
         [Column(TypeName = "varchar(30)")]
         [Required(ErrorMessage = "É necessário preencher o local de emplacamento")]
-        [DisplayName("Local de emplacamento")]
-        public string LocalDeEmplacamento { get; set; }
+        [DisplayName("Cidade do emplacamento")]
+        public string CidadeDeEmplacamento { get; set; }
+
+        [Column(TypeName = "varchar(20)")]
+        [Required(ErrorMessage = "É necessário preenchero o Estado")]
+        [DisplayName("Estado do emplacamento")]
+        public string EstadoEmplacamento { get; set; }
 
         public virtual List<Requisicao> Requisicoes { get; set; }
 
