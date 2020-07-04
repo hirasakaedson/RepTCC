@@ -13,12 +13,7 @@
         <input type="hidden" asp-for="Id" />
 
         <div class="row ">
-            <div class="col-3">
-                <label asp-for="Renavam" class="control-label font-weight-bold"></label>
-                <input asp-for="Renavam" class="form-control" maxlength="13" />
-                <span asp-validation-for="Renavam" class="text-danger"></span>
-            </div>
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="Proprio" class="control-label font-weight-bold "></label>
                 <span asp-validation-for="Proprio" class="text-danger"></span>
                 <select class="form-control single-select" name="Proprio">
@@ -29,24 +24,31 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-6">
+                <label asp-for="Renavam" class="control-label font-weight-bold"></label>
+                <input asp-for="Renavam" class="form-control" maxlength="13" />
+                <span asp-validation-for="Renavam" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
                 <label asp-for="NomeDoProprietario" class="control-label font-weight-bold"></label>
                 <input asp-for="NomeDoProprietario" class="form-control" maxlength="50" />
                 <span asp-validation-for="NomeDoProprietario" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="CpfCnpj" class="control-label font-weight-bold"></label>
                 <input asp-for="CpfCnpj" type="text" name="CpfCnpj" class="form-control" />
                 <span asp-validation-for="CpfCnpj" class="text-danger"></span>
             </div>
-            <div class="col-2">
+            <div class="col-4">
                 <label asp-for="Placa" class="control-label font-weight-bold"></label>
                 <input asp-for="Placa" class="form-control" type="text" maxlength="7" />
                 <span asp-validation-for="Placa" class="text-danger"></span>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="Chassi" class="control-label font-weight-bold"></label>
                 <input asp-for="Chassi" class="form-control" maxlength="20" />
                 <span asp-validation-for="Chassi" class="text-danger"></span>
@@ -78,17 +80,17 @@
 
         </div>
         <div class="row">
-            <div class="col-2">
+            <div class="col-3">
                 <label asp-for="AnoFabricacao" class="control-label font-weight-bold"></label>
                 <input asp-for="AnoFabricacao" class="form-control" maxlength="4" />
                 <span asp-validation-for="AnoFabricacao" class="text-danger"></span>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="TipoCarroceria" class="control-label font-weight-bold"></label>
                 <input asp-for="TipoCarroceria" class="form-control" maxlength="20" />
                 <span asp-validation-for="TipoCarroceria" class="text-danger"></span>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="Cor" class="control-label font-weight-bold"></label>
                 <input asp-for="Cor" class="form-control" maxlength="20" />
                 <span asp-validation-for="Cor" class="text-danger"></span>
@@ -112,7 +114,7 @@
                 <input asp-for="CidadeDeEmplacamento" class="form-control" maxlength="30" />
                 <span asp-validation-for="CidadeDeEmplacamento" class="text-danger"></span>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <label asp-for="EstadoEmplacamento" class="control-label font-weight-bold"></label>
                 <input asp-for="EstadoEmplacamento" class="form-control" maxlength="15" />
                 <span asp-validation-for="EstadoEmplacamento" class="text-danger"></span>
