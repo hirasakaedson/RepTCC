@@ -17,21 +17,28 @@
             <input type="hidden" asp-for="Id" />
         }
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <label asp-for="Data" class="control-label font-weight-bold"></label>
                 <input asp-for="Data" type="date" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <label asp-for="Responsavel" class="control-label font-weight-bold"></label>
-                <input asp-for="Responsavel" class="form-control" />
+                <input asp-for="Responsavel" class="form-control" maxlength="50" />
                 <span asp-validation-for="Responsavel" class="text-danger"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
+                <label asp-for="Motorista" class="control-label font-weight-bold"></label>
+                <input asp-for="Motorista" class="form-control" maxlength="20" />
+                <span asp-validation-for="Motorista" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
                 <label asp-for="VeiculoId" class="control-label font-weight-bold"></label>
                 <select asp-for="VeiculoId" asp-items="ViewBag.VeiculoId" class="form-control">
                     <option>
@@ -42,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <label asp-for="FornecedorId" class="control-label font-weight-bold"></label>
                 <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
                     <option>
@@ -52,22 +59,18 @@
                 <span asp-validation-for="FornecedorId" class="text-danger"></span>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-6">
-                <label asp-for="Motorista" class="control-label font-weight-bold"></label>
-                <input asp-for="Motorista" class="form-control" />
-                <span asp-validation-for="Motorista" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
+            <div class="col-4">
                 <label asp-for="Valor" class="control-label font-weight-bold"></label>
                 <input asp-for="Valor" class="form-control money" id="Valor" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
-            <div class="col-2">
+        </div>
+        <div class="row">
+            <div class="col-4">
                 <label asp-for="Litros" class="control-label font-weight-bold"></label>
-                <input asp-for="Litros" class="form-control" id="Litros" />
+                <input asp-for="Litros" class="form-control" maxlength="3" />
                 <span asp-validation-for="Litros" class="text-danger"></span>
             </div>
         </div>
