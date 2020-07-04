@@ -1,8 +1,8 @@
 ﻿@model Sisgef.Models.Usuario
 
-@{ ViewData["Title"] = "LoginPage";
-    Layout = "~/Views/Shared/_Login.cshtml";
-        }
+@{
+    ViewData["Title"] = "LoginPage";
+}
 
 <style>
     span {
@@ -20,27 +20,29 @@
     <br>
     @using (Html.BeginForm())
     {
-@Html.ValidationSummary(true)
+        @Html.ValidationSummary(true)
 
-                <fieldset style="width: 40%;">
-                    <br />
-                    <input type="text" class="form-control" name="Login" placeholder="Digite seu login..." />
-                    @Html.ValidationMessageFor(model => model.Login)
-                    <br />
-                    <br />
-                    <br />
-                    <input type="password" class="form-control" name="Senha" placeholder="Digite sua senha..." />
-                    @Html.ValidationMessageFor(model => model.Senha)
-                    <br />
-                    <br />
-                    <br />
-                    <button type="submit" class="btn btn-primary" style="background-color: mediumseagreen; border: none;">Logar</button>
-                    <br /><br /><br />
+        <fieldset style="width: 40%;">
+            <br />
+            <input type="text" class="form-control" name="Login" placeholder="Digite seu login..." />
+            @Html.ValidationMessageFor(model => model.Login)
+            <br />
+            <br />
+            <br />
+            <input type="password" class="form-control" name="Senha" placeholder="Digite sua senha..." />
+            @Html.ValidationMessageFor(model => model.Senha)
+            <br />
+            <br />
+            <br />
+            <button type="submit" class="btn btn-primary" style="background-color: mediumseagreen; border: none;">Logar</button>
+            <br /><br /><br />
 
-                    @if (ViewBag.Erro != null)
-                    {
-    <h3 style="padding: 20px; color: white; background-color: dimgray">
-        @ViewBag.Erro
-    </h3>}
-                </fieldset>}
+            @if (ViewBag.Erro != null)
+            {
+                <h3 style="padding: 20px; color: white; background-color: dimgray">
+                    @ViewBag.Erro
+                </h3>
+            }
+        </fieldset>
+    }
 </center>

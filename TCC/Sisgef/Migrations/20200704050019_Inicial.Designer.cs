@@ -9,7 +9,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200703225038_Inicial")]
+    [Migration("20200704050019_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

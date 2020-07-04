@@ -17,7 +17,6 @@ namespace Sisgef.Controllers
         {
             return View();
         }
-
         public IActionResult LoginPage()
         {
             if (User.Identity.IsAuthenticated)
@@ -25,33 +24,6 @@ namespace Sisgef.Controllers
                 return RedirectToAction("UserPage");
             }
 
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult LoginPage(Usuario usuario)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    //aqui poderia ter alguma requisição para base de dados, estou usando dados estáticos para não complicar
-                    if (usuario.Login == "teste" && usuario.Senha == "123")
-                    {
-                        Login(usuario);
-                        return RedirectToAction("UserPage");
-                    }
-
-                    else
-                    {
-                        ViewBag.Erro = "Usuário e / ou senha incorretos!";
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                ViewBag.Erro = "Ocorreu algum erro ao tentar se logar, tente novamente!";
-            }
             return View();
         }
 
@@ -76,6 +48,31 @@ namespace Sisgef.Controllers
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal, propriedadesDeAutenticacao);
         }
 
+        [HttpPost]
+        public IActionResult LoginPage(Usuario usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    //aqui poderia ter alguma requisição para base de dados, estou usando dados estáticos para não complicar
+                    if (usuario.Login == "admin" && usuario.Senha == "admin")
+                    {
+                        Login(usuario);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ViewBag.Erro = "Usuário e / ou senha incorretos!";
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Erro = "Ocorreu algum erro ao tentar se logar, tente novamente!";
+            }
+            return View();
+        }
         [Authorize]
         public IActionResult UserPage()
         {
@@ -85,7 +82,7 @@ namespace Sisgef.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("LoginPage", "Usuario");
         }
 
     }
