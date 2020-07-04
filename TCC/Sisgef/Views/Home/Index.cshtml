@@ -9,8 +9,9 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary text-white mb-4">
                     <div class="card-body">Veículos próprios</div>
+                    <div class="card-body">@ViewBag.ContagemProprio</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="/Veiculo/Lista">Ver mais</a>
+                        <a class="small text-white stretched-link" asp-controller="Veiculo" asp-action="Lista" asp-route-pesquisa="sim">Ver mais</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -18,26 +19,20 @@
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
                     <div class="card-body">Veículos terceiros</div>
+                    <div class="card-body">@ViewBag.ContagemTerceiro</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">Ver mais</a>
+                        <a class="small text-white stretched-link" asp-controller="Veiculo"asp-action="Lista" asp-route-pesquisa="nao">Ver mais</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
-            @*<div class="col-xl-3 col-md-6">
-                <div class="card bg-success text-white mb-4">
-                    <div class="card-body">Success Card</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>*@
+          
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
                     <div class="card-body">Requisições</div>
+                    <div class="card-body">@ViewBag.ContagemRequisicao</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="Requisicao/Lista">Ver mais</a>
+                        <a class="small text-white stretched-link"asp-controller="Requisicao" asp-action="Lista" asp-route-pesquisa="">Ver mais</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>

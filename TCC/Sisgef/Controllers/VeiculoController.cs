@@ -20,23 +20,30 @@ namespace Sisgef.Controllers
         }
 
         // GET: Veiculo
-        public async Task<IActionResult> Lista(string pesquisa ="")
+        public async Task<IActionResult> Lista(string pesquisa = "")
         {
-            if (pesquisa == null)
+            if (pesquisa == "sim")
             {
-                return View("ListaErro");
+                return View(await _context.Veiculo.Where(x => x.Proprio.Contains(pesquisa)).ToListAsync());
             }
-            return View(await _context.Veiculo.Where(x => x.Placa.Contains(pesquisa)).ToListAsync());
+            if (pesquisa == "nao")
+            {
+                return View(await _context.Veiculo.Where(x => x.Proprio.Contains(pesquisa)).ToListAsync());
+            }
+            if (pesquisa != "")
+            {
+                return View(await _context.Veiculo.Where(x => x.Placa.Contains(pesquisa)).ToListAsync());
+            }
+            return View(await _context.Veiculo.ToListAsync());
         }
         public IActionResult AddEditVeiculo(int id = 0)
         {
-            
             if (id == 0)
                 return View(new Veiculo());
             else
                 return View(_context.Veiculo.Find(id));
         }
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddEditVeiculo([Bind("Renavam, NomeDoProprietario, CpfCnpj, Placa, Chassi, Proprio, TipoDoVeiculo, Combustivel, Marca, Modelo, AnoFabricacao, TipoCarroceria, Cor, Odometro, Observacao,LocalDeEmplacamento ")] Veiculo veiculo)
@@ -44,7 +51,10 @@ namespace Sisgef.Controllers
             if (ModelState.IsValid)
             {
                 if (veiculo.Id == 0)
+                {
+
                     _context.Add(veiculo);
+                }
                 else
                     _context.Update(veiculo);
 
@@ -62,6 +72,6 @@ namespace Sisgef.Controllers
             return RedirectToAction(nameof(Lista));
         }
 
-        
+
     }
 }

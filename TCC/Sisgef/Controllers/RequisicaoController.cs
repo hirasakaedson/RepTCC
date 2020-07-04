@@ -23,14 +23,13 @@ namespace Sisgef.Controllers
         // GET: Requisicao
         public async Task<IActionResult> Lista(string pesquisa = "")
         {
-            if (pesquisa == null)
+            //ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            //ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
+            if (pesquisa != "")
             {
-                return View("ListaErro");
+                return View(await _context.Requisicao.Where(x => x.Veiculo.Placa.Contains(pesquisa)).ToListAsync());
             }
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
-
-            return View(await _context.Requisicao.Where(x => x.Veiculo.Placa.Contains(pesquisa)).ToListAsync());
+            return View(await _context.Requisicao.ToListAsync());
         }
         public IActionResult AddEditServico(int id = 0)
         {
@@ -83,7 +82,7 @@ namespace Sisgef.Controllers
 
         public IActionResult AddEditCombustivel(int id = 0)
         {
-            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.Where(x => x.Posto=="sim").ToList(), "Id", "Nome");
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.Where(x => x.Posto == "sim").ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
 
 
