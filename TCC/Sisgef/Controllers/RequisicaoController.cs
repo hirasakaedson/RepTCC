@@ -35,6 +35,7 @@ namespace Sisgef.Controllers
         {
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Combustivel");
 
 
             if (id == 0)

@@ -50,33 +50,43 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label asp-for="FornecedorId" class="control-label font-weight-bold"></label>
-                <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
+                <label asp-for="Combustivel" class="control-label font-weight-bold"></label>
+                <select asp-for="Combustivel" asp-items="ViewBag.VeiculoId" class="form-control">
                     <option>
                         Selecione...
                     </option>
                 </select>
-                <span asp-validation-for="FornecedorId" class="text-danger"></span>
-            </div>
-        </div>
+                <span asp-validation-for="Combustivel" class="text-danger"></span>
+                </
+                <div class="row">
+                    <div class="col-6">
+                        <label asp-for="FornecedorId" class="control-label font-weight-bold"></label>
+                        <select asp-for="FornecedorId" asp-items="ViewBag.FornecedorId" class="form-control">
+                            <option>
+                                Selecione...
+                            </option>
+                        </select>
+                        <span asp-validation-for="FornecedorId" class="text-danger"></span>
+                    </div>
+                </div>
 
-        <div class="row">
-            <div class="col-4">
-                <label asp-for="Valor" class="control-label font-weight-bold"></label>
-                <input asp-for="Valor" class="form-control money" id="Valor" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <label asp-for="Litros" class="control-label font-weight-bold"></label>
-                <input asp-for="Litros" class="form-control" maxlength="3" />
-                <span asp-validation-for="Litros" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-6 float-right">
-            <input type="submit" value="Salvar" class="btn btn-primary" />
-        </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="Valor" class="control-label font-weight-bold"></label>
+                        <input asp-for="Valor" class="form-control money" id="Valor" />
+                        <span asp-validation-for="Valor" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label asp-for="Litros" class="control-label font-weight-bold"></label>
+                        <input asp-for="Litros" class="form-control" maxlength="3" />
+                        <span asp-validation-for="Litros" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6 float-right">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
     </form>
 </div>
 

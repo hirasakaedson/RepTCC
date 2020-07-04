@@ -72,6 +72,12 @@ namespace Sisgef.Models
         public int FornecedorId { get; set; }
 
 
+        [Required(ErrorMessage = "É necessário preencher tipo de combustível")]
+        [Column(TypeName = "varchar(15)")]
+        [DisplayName("Combustível")]
+        public string Combustivel { get; set; }
+
+
 
     }
 }
