@@ -31,11 +31,11 @@ namespace Sisgef.Controllers
             }
             return View(await _context.Requisicao.ToListAsync());
         }
+       
         public IActionResult AddEditServico(int id = 0)
         {
             ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
             ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
-            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Combustivel");
 
 
             if (id == 0)
@@ -94,7 +94,7 @@ namespace Sisgef.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddEditCombustivel([Bind("Id, Data, Responsavel, TipoDeServico, Observacao, Motorista, Valor, Litros, VeiculoId, FornecedorId")] Requisicao requisicao)
+        public async Task<IActionResult> AddEditCombustivel([Bind("Id, Data, Responsavel, Motorista, Valor, Litros, VeiculoId, FornecedorId, Combustivel")] Requisicao requisicao)
         {
             if (ModelState.IsValid)
             {

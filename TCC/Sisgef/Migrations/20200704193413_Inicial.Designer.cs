@@ -9,7 +9,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200704153150_Inicial")]
+    [Migration("20200704193413_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,8 +76,10 @@ namespace Sisgef.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Combustivel")
+                        .HasColumnType("varchar(15)");
+
                     b.Property<string>("Data")
-                        .IsRequired()
                         .HasColumnType("varchar(10)");
 
                     b.Property<int>("FornecedorId")
@@ -87,18 +89,15 @@ namespace Sisgef.Migrations
                         .HasColumnType("varchar(15)");
 
                     b.Property<string>("Motorista")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Observacao")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Responsavel")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("TipoDeServico")
-                        .IsRequired()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Valor")

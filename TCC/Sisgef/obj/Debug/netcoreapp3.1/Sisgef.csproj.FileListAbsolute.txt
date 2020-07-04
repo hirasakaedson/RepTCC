@@ -843,6 +843,7 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.c
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\AddEditCombustivel.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\AddEditServico.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\GerarPDF.cshtml.g.cs
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\GerarPDFCombustivel.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\Lista.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\ListaErro.cshtml.g.cs
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -869,4 +870,4 @@ C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.dll
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.pdb
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.genruntimeconfig.cache
 C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Sisgef.csprojAssemblyReference.cache
-C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\GerarPDFCombustivel.cshtml.g.cs
+C:\Projetos\RepTCC\TCC\Sisgef\obj\Debug\netcoreapp3.1\Razor\Views\Requisicao\ListaCombustivel.cshtml.g.cs

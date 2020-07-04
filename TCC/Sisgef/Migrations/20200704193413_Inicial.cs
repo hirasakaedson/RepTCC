@@ -63,15 +63,16 @@ namespace Sisgef.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Data = table.Column<string>(type: "varchar(10)", nullable: false),
-                    Responsavel = table.Column<string>(type: "varchar(50)", nullable: false),
-                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Observacao = table.Column<string>(type: "varchar(100)", nullable: true),
-                    Motorista = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Data = table.Column<string>(type: "varchar(10)", nullable: true),
+                    Responsavel = table.Column<string>(type: "varchar(50)", nullable: true),
+                    TipoDeServico = table.Column<string>(type: "varchar(20)", nullable: true),
+                    Observacao = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Motorista = table.Column<string>(type: "varchar(20)", nullable: true),
                     Valor = table.Column<string>(type: "varchar(15)", nullable: true),
                     Litros = table.Column<string>(type: "varchar(15)", nullable: true),
                     VeiculoId = table.Column<int>(nullable: false),
-                    FornecedorId = table.Column<int>(nullable: false)
+                    FornecedorId = table.Column<int>(nullable: false),
+                    Combustivel = table.Column<string>(type: "varchar(15)", nullable: true)
                 },
                 constraints: table =>
                 {

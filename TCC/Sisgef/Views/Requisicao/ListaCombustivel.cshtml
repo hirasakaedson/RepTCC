@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Sisgef.Models.Requisicao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/Requisicao.css" rel="stylesheet" />
+<div class="container-fluid mt-4 ">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-4">
+                <h4>Riquisições cadastradas</h4>
+            </div>
+            <div class="col-7">
+                <form asp-action="Lista">
+                    <div class="row" style="float:right">
+                        <div class="col-10">
+                            <input class="form-control" required="required" placeholder="Placa" name="Pesquisa" />
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-success">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr />
+       
+        <div class="row h5 text-left">
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Data)
+            </div>
+            <div class="col-3">
+                @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+            </div>
+            <div class="col-2">
+                @Html.DisplayNameFor(model => model.Veiculo.Placa)
+            </div>
+            <div class="col-3">
+                @Html.DisplayNameFor(model => model.Valor)
+            </div>
+        </div>
+        <hr />
+
+        <div class="accordion" id="accordionExample">
+            @foreach (var item in Model)
+            {
+                <div class="row font-weight-bold" data-toggle="collapse" data-target="#collapse@(item.Id)" aria-expanded="true"
+                     aria-controls="collapseOne">
+                    <div class="col-2 btn-link font-weight-bold">
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </div>
+                    <div class="col-3 btn-link font-weight-bold">
+                        @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
+                    </div>
+                    <div class="col-2 btn-link font-weight-bold">
+                        @Html.DisplayFor(modelItem => item.Veiculo.Placa)
+                    </div>
+                    <div class="col-2 btn-link font-weight-bold">
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </div>
+                    <div class="col-2">
+                        <a target="_blank" class=" float-right" asp-action="GerarPDF" asp-route-id="@item.Id"> Imprimir</a>
+                    </div>
+                    <div class="col-1">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger ml-1 float-left" onclick="return confirm('Você tem certeza que deseja deletar?')">Excluir </a>
+                    </div>
+                </div>
+                <hr />
+                <div id="collapse@(item.Id)" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="row">
+                        <div class="col-3">
+                            <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Responsavel)</a><br />
+                            @Html.DisplayFor(model => item.Responsavel)
+                        </div>
+                       
+                        <div class="col-3">
+                            <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Motorista)</a><br />
+                            @Html.DisplayFor(model => item.Motorista)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a class="font-weight-bold"> @Html.DisplayNameFor(model => model.Litros)</a><br />
+                            @Html.DisplayFor(model => item.Litros)
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
