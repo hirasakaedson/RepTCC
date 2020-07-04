@@ -9,7 +9,7 @@ using Sisgef;
 namespace Sisgef.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200704050019_Inicial")]
+    [Migration("20200704153150_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -131,6 +131,10 @@ namespace Sisgef.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("CidadeDeEmplacamento")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
                     b.Property<string>("Combustivel")
                         .IsRequired()
                         .HasColumnType("varchar(15)");
@@ -143,9 +147,9 @@ namespace Sisgef.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 
-                    b.Property<string>("LocalDeEmplacamento")
+                    b.Property<string>("EstadoEmplacamento")
                         .IsRequired()
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Marca")
                         .IsRequired()

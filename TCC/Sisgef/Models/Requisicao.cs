@@ -33,12 +33,12 @@ namespace Sisgef.Models
         public string TipoDeServico { get; set; }
 
 
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "varchar(50)")]
         [DisplayName("Observação")]
         public string Observacao { get; set; }
 
 
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "varchar(20)")]
         [Required(ErrorMessage = "É necessário informar o motorista")]
         [DisplayName("Motorista")]
         public string Motorista { get; set; }

@@ -49,7 +49,8 @@ namespace Sisgef.Migrations
                     Cor = table.Column<string>(type: "varchar(20)", nullable: false),
                     Odometro = table.Column<string>(type: "varchar(7)", nullable: false),
                     Observacao = table.Column<string>(type: "varchar(100)", nullable: true),
-                    LocalDeEmplacamento = table.Column<string>(type: "varchar(30)", nullable: false)
+                    CidadeDeEmplacamento = table.Column<string>(type: "varchar(30)", nullable: false),
+                    EstadoEmplacamento = table.Column<string>(type: "varchar(20)", nullable: false)
                 },
                 constraints: table =>
                 {

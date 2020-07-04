@@ -1,12 +1,4 @@
-$('#TipoDeServico').keypress(function (e) {
-    var regex = new RegExp("^[a-zA-Z\u00C0-\u00FF ]+$");
-    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (regex.test(str)) {
-        return true;
-    }
-    e.preventDefault();
-    return false;
-});
+
 $('#Email').keypress(function (e) {
     var regex = new RegExp("^[a-zA-Z0-9@._-]+$");
     var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);

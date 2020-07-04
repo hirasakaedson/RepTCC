@@ -129,6 +129,10 @@ namespace Sisgef.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("CidadeDeEmplacamento")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
                     b.Property<string>("Combustivel")
                         .IsRequired()
                         .HasColumnType("varchar(15)");
@@ -141,9 +145,9 @@ namespace Sisgef.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 
-                    b.Property<string>("LocalDeEmplacamento")
+                    b.Property<string>("EstadoEmplacamento")
                         .IsRequired()
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Marca")
                         .IsRequired()

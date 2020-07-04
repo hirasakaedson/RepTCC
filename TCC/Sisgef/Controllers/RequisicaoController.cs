@@ -23,8 +23,8 @@ namespace Sisgef.Controllers
         // GET: Requisicao
         public async Task<IActionResult> Lista(string pesquisa = "")
         {
-            //ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
-            //ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
+            ViewBag.FornecedorId = new SelectList(_context.Fornecedor.ToList(), "Id", "Nome");
+            ViewBag.VeiculoId = new SelectList(_context.Veiculo.ToList(), "Id", "Placa");
             if (pesquisa != "")
             {
                 return View(await _context.Requisicao.Where(x => x.Veiculo.Placa.Contains(pesquisa)).ToListAsync());
